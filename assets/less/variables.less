@@ -21,57 +21,64 @@
 @brand-danger:          #d9534f;
 
 //== 几种常见意义 前景背景需要颜色搭配，图标添加，悬停效果：关联 按钮（带图标），段落，文内，表格等。
-@mark-info: ;// 需要注意
-@mark-info-bg: ;
-@mark-info-hover:;
+@mark-info-text: #31708f;// 需要注意
+@mark-info-bg: #d9edf7;
+@mark-info-text-hover:;
 @mark-info-hover-bg:;
 @mark-info-icon:;
 
-@mark-bad: ;// 不好
+@mark-bad-text: ;// 不好
 @mark-bad-bg: ;
-@mark-bad-hover: ;
+@mark-bad-text-hover: ;
 @mark-bad-hover-bg: ;
 @mark-bad-icon:;
 
-@mark-good:;// 好事
+@mark-good-text:;// 好事
 @mark-good-bg:;
-@mark-good-hover:;
+@mark-good-text-hover:;
 @mark-good-hover-bg:;
 @mark-goog-icon:;
 
-@mark-todo:;// 待办
+@mark-todo-text:;// 待办
 @mark-todo-bg:;
-@mark-todo-hover:;
+@mark-todo-text-hover:;
 @mark-todo-hover-bg:;
 @mark-todo-icon:;
 
-@mark-success:;// 完成
-@mark-success-bg:;
-@mark-success-hover:;
+@mark-success-text: white;// 完成
+@mark-success-bg: yellow;
+@mark-success-text-hover:;
 @mark-success-hover-bg:;
 @mark-success-icon:;
 
-@mark-danger: red;// 危险
+@mark-danger-text: red;// 危险
 @mark-danger-bg: brown;
-@mark-danger-icon:;
-@mark-danger-hover:;
+@mark-danger--text-hover:;
 @mark-danger-hover-bg:;
+@mark-danger-icon:;
 
-@mark-warning: ;// 警告
+@mark-warning-text: black;// 警告
 @mark-warning-bg: red;
-@mark-warning-hover:;
+@mark-warning-text-hover: ;
 @mark-warning-hover-bg:;
 @mark-warning-icon:;
 
 //== 表情设定
 
 
-//== 全反馈设定
-// 字体颜色加深
-// 背景颜色加深
+
 
 //== 特殊字装饰设定
 
+
+//== 全反馈设定
+// 反馈速度设定
+@transition-slow: all 1s ease-in-out;
+@transition-normal: all 0.8s ease-in-out;
+@transition-fast: all 0.4s ease-in-out;
+
+// 字体颜色加深
+// 背景颜色加深
 
 
 //== Scaffolding
@@ -202,7 +209,7 @@
 
 //== 按钮
 //
-//## For each of Bootstrap's buttons, define text, background and border color.
+//## For each  buttons, define text, background and border color.
 
 @btn-font-weight:                normal;
 
@@ -553,20 +560,20 @@
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-@state-success-text:             white;//#3c763d
-@state-success-bg:               yellow;//#dff0d8
+@state-success-text:             @mark-success-text;//#3c763d
+@state-success-bg:               @mark-success-bg;//#dff0d8
 @state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text:                #31708f;
-@state-info-bg:                  #d9edf7;//#d9edf7
+@state-info-text:                @mark-info-text;
+@state-info-bg:                  @mark-info-bg;
 @state-info-border:              darken(spin(@state-info-bg, -10), 7%);
 
-@state-warning-text:            #d9edf7;//#8a6d3b
-@state-warning-bg:               red;//#fcf8e3
+@state-warning-text:           @mark-warning-text;//#8a6d3b
+@state-warning-bg:              @mark-warning-bg;//#fcf8e3
 @state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
 
-@state-danger-text:              white;//#a94442
-@state-danger-bg:               brown; //#f2dede
+@state-danger-text:            @mark-danger-text;//#a94442
+@state-danger-bg:               @mark-danger-bg; //#f2dede
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 
 
