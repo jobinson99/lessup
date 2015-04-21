@@ -1,0 +1,50 @@
+// ³£ÓÃÐÎ×´
+
+.shape-primary,
+.shape-success,
+.shape-todo,
+.shape-done,
+.shape-present {
+    margin-right: 20px;
+}
+
+.shape-primary,
+.shape-primary:after{
+    background-color:@mark-primary-bg;
+}
+
+.shape-success,
+.shape-success:after{
+    background-color: @mark-success-bg;
+}
+
+.shape-todo,
+.shape-todo:after {
+    background-color: @mark-good-bg;
+}
+.shape-done,
+.shape-done:after {
+    background-color: @mark-bad-bg;
+}
+
+.shape-present,
+.shape-present:after {
+    background-color: @mark-info-bg;
+}
+
+.shape-primary:after,
+.shape-success:after,
+.shape-todo:after,
+.shape-done:after,
+.shape-present:after {
+    border-bottom: 11px solid @body-bg;
+    border-top: 11px solid @body-bg;
+    border-left: 11px solid transparent;
+    height: 0;
+    width: 0;
+    content: "";
+    position: absolute;
+}
+
+
+
