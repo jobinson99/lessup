@@ -15,19 +15,24 @@
   > li {
     position: relative;
     display: block;
+    padding: 0;
 
     > a {
       position: relative;
       display: block;
       padding: @nav-link-padding;
       text-shadow: @link-none-shadow;
-	  background: @nav-link-bg;
+      background: @nav-link-bg;
 	
       &:hover,
       &:focus {
         text-decoration: none;
         background-color: @nav-link-hover-bg;
-		color: white;
+        color: white;
+      }
+      &:visited {
+          background-color:;
+          color: @gray-light;
       }
     }
 
@@ -73,7 +78,7 @@
 }
 
 
-// Tabs
+// Tabs ÇÐ»»Ò³
 // -------------------------
 
 // Give the tabs something to sit on

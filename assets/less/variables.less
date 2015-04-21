@@ -20,32 +20,40 @@
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
+
 //== 几种常见意义 前景背景需要颜色搭配，图标添加，悬停效果：关联 按钮（带图标），段落，文内，表格等。
-@mark-info-text: #31708f;// 需要注意
-@mark-info-bg: #d9edf7;
+
+@mark-primary-text: @gray-darker;// 基本
+@mark-primary-bg: #0FF;
+@mark-primary-text-hover:;
+@mark-primary-hover-bg:;
+@mark-primary-icon:;
+
+@mark-info-text: @gray-darker;// 需要注意
+@mark-info-bg: #0F0;
 @mark-info-text-hover:;
 @mark-info-hover-bg:;
 @mark-info-icon:;
 
-@mark-bad-text: ;// 不好
-@mark-bad-bg: ;
+@mark-bad-text: @gray-darker;// 不好
+@mark-bad-bg: #F9C;
 @mark-bad-text-hover: ;
 @mark-bad-hover-bg: ;
 @mark-bad-icon:;
 
-@mark-good-text:;// 好事
-@mark-good-bg:;
+@mark-good-text: @gray-darker;// 好事
+@mark-good-bg:#FC9;
 @mark-good-text-hover:;
 @mark-good-hover-bg:;
 @mark-goog-icon:;
 
-@mark-todo-text:;// 待办
-@mark-todo-bg:;
+@mark-todo-text: white;// 待办
+@mark-todo-bg:@brand-primary;
 @mark-todo-text-hover:;
 @mark-todo-hover-bg:;
 @mark-todo-icon:;
 
-@mark-success-text: white;// 完成
+@mark-success-text: @gray-dark;// 完成
 @mark-success-bg: yellow;
 @mark-success-text-hover:;
 @mark-success-hover-bg:;
@@ -77,9 +85,10 @@
 @transition-normal: all 0.8s ease-in-out;
 @transition-fast: all 0.4s ease-in-out;
 
-// 字体颜色加深
-// 背景颜色加深
 
+// 字体颜色加深 mixin/text-emphasis.less .text-variant
+// 背景颜色加深 .bg-variant
+// 反色 mixin/color.less
 
 //== Scaffolding
 //
@@ -893,7 +902,7 @@
 //
 //##
 
-@code-color:                  @gray-dark;
+@code-color:                  @gray;
 @code-bg:                     #eef;
 
 @kbd-color:                   #fff;
@@ -901,7 +910,6 @@
 
 @pre-bg:                      #C0FFC0;
 @pre-color:                   @gray-dark;
-@pre-border-left:		5px ridge #c3c3c3;
 @pre-scrollable-max-height:   340px;
 @pre-padding:	15px 0px 15px 15px; 
 
@@ -911,8 +919,6 @@
 
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
-//** Text muted color
-@text-muted:                  @gray-light;
 //** Abbreviations and acronyms border color
 @abbr-border-color:           @gray-light;
 //** Headings small color

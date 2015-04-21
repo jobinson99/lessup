@@ -4,11 +4,11 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>测试改造后的bootstrap：lessup</title>
-<link rel="stylesheet/less" type="text/css" href="../assets/less/main.less" />
-<script src="../assets/js/less.js" type="text/javascript"></script>
+<link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+<script src="assets/js/less.js" type="text/javascript"></script>
 
-<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="../assets/js/ie-emulation-modes-warning.js"></script>
+<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="assets/js/ie-emulation-modes-warning.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -36,7 +36,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../" class="navbar-brand">LessMe 品牌</a>
+      <a href="../" class="navbar-brand">LessMe 标识</a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse">
       <ul class="nav navbar-nav">
@@ -889,12 +889,14 @@
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:#"</span><span class="nt">&gt;</span>first.last@example.com<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/address&gt;</span></code></pre></div>
 
+<h2>旁注</h2>
+<aside>旁注</aside>
 
   <!-- Blockquotes -->
   <h2 id="type-blockquotes">引言 Blockquotes</h2>
   <p>For quoting blocks of content from another source within your document.</p>
 
-  <h3>Default blockquote</h3>
+  <h3>默认 blockquote</h3>
   <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
   <div class="bs-example" data-example-id="simple-blockquote">
     <blockquote>
@@ -935,26 +937,21 @@
 
 
   <!-- Lists -->
-  <h2 id="type-lists">L列表 ists</h2>
+  <h2 id="type-lists">列表 Lists</h2>
 
-  <h3>Unordered</h3>
+  <h3>无序 Unordered</h3>
   <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
   <div class="bs-example" data-example-id="simple-ul">
     <ul>
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipiscing elit</li>
-      <li>Integer molestie lorem at massa</li>
-      <li>Facilisis in pretium nisl aliquet</li>
       <li>Nulla volutpat aliquam velit
         <ul>
           <li>Phasellus iaculis neque</li>
           <li>Purus sodales ultricies</li>
-          <li>Vestibulum laoreet porttitor sem</li>
-          <li>Ac tristique libero volutpat at</li>
         </ul>
       </li>
       <li>Faucibus porta lacus fringilla vel</li>
-      <li>Aenean sit amet erat nunc</li>
       <li>Eget porttitor lorem</li>
     </ul>
   </div>
@@ -962,16 +959,13 @@
   <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
-  <h3>Ordered</h3>
+  <h3>有序 Ordered</h3>
   <p>A list of items in which the order <em>does</em> explicitly matter.</p>
   <div class="bs-example" data-example-id="simple-ol">
     <ol>
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipiscing elit</li>
       <li>Integer molestie lorem at massa</li>
-      <li>Facilisis in pretium nisl aliquet</li>
-      <li>Nulla volutpat aliquam velit</li>
-      <li>Faucibus porta lacus fringilla vel</li>
       <li>Aenean sit amet erat nunc</li>
       <li>Eget porttitor lorem</li>
     </ol>
@@ -980,8 +974,8 @@
   <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ol&gt;</span></code></pre></div>
 
-  <h3>Unstyled</h3>
-  <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
+  <h3>无样式 Unstyled</h3>
+  <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>只传染到一层</strong>，嵌套的没有被感染到</p>
   <div class="bs-example" data-example-id="unstyled-list">
     <ul class="list-unstyled">
       <li>Lorem ipsum dolor sit amet</li>
@@ -990,7 +984,7 @@
       <li>Facilisis in pretium nisl aliquet</li>
       <li>Nulla volutpat aliquam velit
         <ul>
-          <li>Phasellus iaculis neque</li>
+          <li>嵌套的没有被感染到</li>
           <li>Purus sodales ultricies</li>
           <li>Vestibulum laoreet porttitor sem</li>
           <li>Ac tristique libero volutpat at</li>
@@ -1005,7 +999,7 @@
   <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
-  <h3>Inline</h3>
+  <h3>行内 Inline</h3>
   <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.</p>
   <div class="bs-example" data-example-id="list-inline">
     <ul class="list-inline">
@@ -2911,19 +2905,19 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 </div>
 
 <div class="bs-docs-section">
-  <h1 id="responsive-utilities" class="page-header">Responsive utilities</h1>
+  <h1 id="responsive-utilities" class="page-header">响应式设计 Responsive utilities</h1>
 
   <p class="lead">For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query. Also included are utility classes for toggling content when printed.</p>
   <p>Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.</p>
 
 
-  <h2 id="responsive-utilities-classes">Available classes</h2>
+  <h2 id="responsive-utilities-classes">可用的类 Available classes</h2>
   <p>Use a single or combination of the available classes for toggling content across viewport breakpoints.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped responsive-utilities">
       <thead>
         <tr>
-          <th></th>
+          <th>可用的类</th>
           <th>
             Extra small devices
             <small>Phones (&lt;768px)</small>
@@ -2945,15 +2939,15 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
       <tbody>
         <tr>
           <th scope="row"><code>.visible-xs-*</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">显示</td>
+          <td class="is-hidden">隐藏</td>
+          <td class="is-hidden">隐藏</td>
+          <td class="is-hidden">隐藏</td>
         </tr>
         <tr>
           <th scope="row"><code>.visible-sm-*</code></th>
           <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
+          <td class="is-visible">显示</td>
           <td class="is-hidden">Hidden</td>
           <td class="is-hidden">Hidden</td>
         </tr>
@@ -2961,7 +2955,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
           <th scope="row"><code>.visible-md-*</code></th>
           <td class="is-hidden">Hidden</td>
           <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
+          <td class="is-visible">显示</td>
           <td class="is-hidden">Hidden</td>
         </tr>
         <tr>
@@ -2969,13 +2963,13 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
           <td class="is-hidden">Hidden</td>
           <td class="is-hidden">Hidden</td>
           <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
+          <td class="is-visible">显示</td>
         </tr>
       </tbody>
       <tbody>
         <tr>
           <th scope="row"><code>.hidden-xs</code></th>
-          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">隐藏</td>
           <td class="is-visible">Visible</td>
           <td class="is-visible">Visible</td>
           <td class="is-visible">Visible</td>
@@ -2983,7 +2977,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
         <tr>
           <th scope="row"><code>.hidden-sm</code></th>
           <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">隐藏</td>
           <td class="is-visible">Visible</td>
           <td class="is-visible">Visible</td>
         </tr>
@@ -2991,7 +2985,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
           <th scope="row"><code>.hidden-md</code></th>
           <td class="is-visible">Visible</td>
           <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">隐藏</td>
           <td class="is-visible">Visible</td>
         </tr>
         <tr>
@@ -2999,13 +2993,13 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
           <td class="is-visible">Visible</td>
           <td class="is-visible">Visible</td>
           <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">隐藏</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <p>As of v3.2.0, the <code>.visible-*-*</code> classes for each breakpoint come in three variations, one for each CSS <code>display</code> property value listed below.</p>
+  <p>显示的话，有三种可用属性：As of v3.2.0, the <code>.visible-*-*</code> classes for each breakpoint come in three variations, one for each CSS <code>display</code> property value listed below.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -3030,10 +3024,10 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
       </tbody>
     </table>
   </div>
-  <p>So, for extra small (<code>xs</code>) screens for example, the available <code>.visible-*-*</code> classes are: <code>.visible-xs-block</code>, <code>.visible-xs-inline</code>, and <code>.visible-xs-inline-block</code>.</p>
-  <p>The classes <code>.visible-xs</code>, <code>.visible-sm</code>, <code>.visible-md</code>, and <code>.visible-lg</code> also exist, but are <strong>deprecated as of v3.2.0</strong>. They are approximately equivalent to <code>.visible-*-block</code>, except with additional special cases for toggling <code>&lt;table&gt;</code>-related elements.</p>
+  <p>示例：for extra small (<code>xs</code>) screens for example, the available <code>.visible-*-*</code> classes are: <code>.visible-xs-block</code>, <code>.visible-xs-inline</code>, and <code>.visible-xs-inline-block</code>.</p>
+  <p><del>The classes <code>.visible-xs</code>, <code>.visible-sm</code>, <code>.visible-md</code>, and <code>.visible-lg</code> also exist, but are <strong>deprecated as of v3.2.0</strong>. </del>They are approximately equivalent to <code>.visible-*-block</code>, except with additional special cases for toggling <code>&lt;table&gt;</code>-related elements.</p>
 
-  <h2 id="responsive-utilities-print">Print classes</h2>
+  <h2 id="responsive-utilities-print">打印 Print classes</h2>
   <p>Similar to the regular responsive classes, use these for toggling content for print.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped responsive-utilities">
@@ -3062,13 +3056,13 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
       </tbody>
     </table>
   </div>
-  <p>The class <code>.visible-print</code> also exists but is <strong>deprecated</strong> as of v3.2.0. It is approximately equivalent to <code>.visible-print-block</code>, except with additional special cases for <code>&lt;table&gt;</code>-related elements.</p>
+  <p><del>The class <code>.visible-print</code> also exists but is <strong>deprecated</strong> as of v3.2.0.</del> It is approximately equivalent to <code>.visible-print-block</code>, except with additional special cases for <code>&lt;table&gt;</code>-related elements.</p>
 
 
-  <h2 id="responsive-utilities-tests">Test cases</h2>
+  <h2 id="responsive-utilities-tests">如何测试 Test cases</h2>
   <p>Resize your browser or load on different devices to test the responsive utility classes.</p>
 
-  <h3>Visible on...</h3>
+  <h3>可见 Visible on...</h3>
   <p>Green checkmarks indicate the element <strong>is visible</strong> in your current viewport.</p>
   <div class="row responsive-utilities-test visible-on">
     <div class="col-xs-6 col-sm-3">
@@ -3118,7 +3112,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     </div>
   </div>
 
-  <h3>Hidden on...</h3>
+  <h3>隐藏 Hidden on...</h3>
   <p>Here, green checkmarks also indicate the element <strong>is hidden</strong> in your current viewport.</p>
   <div class="row responsive-utilities-test hidden-on">
     <div class="col-xs-6 col-sm-3">
@@ -3878,20 +3872,20 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/docs.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/docs.min.js"></script>
 
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 
 
 <script>
   window.twttr = (function (d,s,id) {
     var t, js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
-    js.src="../assets/js/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    js.src="assets/js/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
     return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
   }(document, "script", "twitter-wjs"));
 </script>
@@ -3905,7 +3899,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     t.async = true;
     t.id    = 'gauges-tracker';
     t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-    t.src = '../assets/js/track.js';
+    t.src = 'assets/js/track.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(t, s);
   })();

@@ -9,9 +9,10 @@ kbd,
 pre,
 samp {
   font-family: @font-family-monospace;
+  transition: @transition-normal;
 }
 
-// Inline code
+// Inline code ÐÐÄÚ´úÂë
 code {
   padding: 0px 5px;
   font-size: @font-size-smaller;
@@ -23,11 +24,11 @@ code {
 
  
   &:hover {
-      color: black;
+      color: @gray-darker;
     
     background: rgba(238,238,255,0.5);
-    border-left: 5px solid #c3c3c3;
-    border-right: 5px solid #c3c3c3;
+    border-left: 5px solid #dcdcdc;
+    border-right: 5px solid #dcdcdc;
 
   }
 }
@@ -61,9 +62,9 @@ pre {
   color: @pre-color;
   background-color: @pre-bg;
   border-radius: @border-radius-base;
-  border-left: @pre-border-left;
+  border-left: 5px ridge #c3c3c3;
     
-    box-shadow: 0px 0 15px #c3c3c3;
+  box-shadow: 0px 0 15px #c3c3c3;
 
   // Account for some code outputs that place code tags in pre tags
   code {

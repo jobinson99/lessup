@@ -1,0 +1,36 @@
+//== 颜色变化
+
+// 反色
+
+
+
+// 颜色变化：用于悬停普通文本和背景颜色加深或变浅。
+
+// Typography
+
+.text-emphasis-variant(@color) {
+  color: @color;
+  a&:hover {
+    color: darken(@color, 10%);
+  }
+}
+
+.bg-variant(@color) {
+    background-color: @color;
+    transition: @transition-normal;
+    
+  a&:hover {
+    background-color: darken(@color, 10%);
+  }
+
+// TODO 小屏幕下，过渡效果去除
+}
+
+.text-variant(@color){
+    color:@color;
+    transition: @transition-normal;
+    
+    a&:hover{
+        color:darken(@color, 10%);
+    }
+}

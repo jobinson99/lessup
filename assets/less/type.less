@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-// Headings鏍囬
+// Headings标题
 // -------------------------
 
 h1, h2, h3, h4, h5, h6,
@@ -14,7 +14,8 @@ h1, h2, h3, h4, h5, h6,
     color: @headings-color;
     background-color: rgba(255,255,255,0.5);
     padding: 15px 5px 10px 40px;
-
+    transition: @transition-normal;
+    
     small,
     .small {
         font-weight: normal;
@@ -51,6 +52,14 @@ h6, .h6 {
     }
 }
 
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
+    padding: 15px 5px 10px 40px;
+}
+
 h1, .h1 { font-size: @font-size-h1; }
 h2, .h2 { font-size: @font-size-h2; }
 h3, .h3 { font-size: @font-size-h3; }
@@ -62,7 +71,6 @@ h6, .h6 { font-size: @font-size-h6; }
 // -------------------------
 
 .page-header {
-    padding-bottom: ((@line-height-computed / 2) - 1);
     margin: (@line-height-computed * 2) 0 @line-height-computed;
     border-bottom: 1px solid @page-header-border-color;
     
@@ -76,16 +84,16 @@ h6, .h6 { font-size: @font-size-h6; }
     }
 }
 
-
 // Body text
 // -------------------------
 
 p {
     margin: 0 0 (@line-height-computed / 2);
 
+    .text-variant(@gray-base);
+    
     &:hover {
         background: rgba(255,255,255,0.5);
-        color: @gray-base;
     }
 }
 
@@ -96,14 +104,11 @@ p {
     font-weight: 500;
     line-height: 1.4;
 
-    background: #C0FFC0;
     border-bottom: 1px solid #dcdcdc;
     border-top: 1px solid #dcdcdc;
 
-    &:hover {
-        background:;
-        color:;
-    }
+    .text-variant(@gray-dark);
+    .bg-variant(#c0ffc0);
 }
 
 
@@ -147,24 +152,24 @@ em,
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
 
-// Contextual colors 文本颜色
+// Contextual colors 特殊文本 颜色
 .text-muted {
-    color: @text-muted;
+    color: @mark-info-text;
 }
 .text-primary {
-    .text-emphasis-variant(@brand-primary);
+    .text-emphasis-variant(@mark-primary-text);
 }
 .text-success {
-    .text-emphasis-variant(@state-success-text);
+    .text-emphasis-variant(@mark-success-text);
 }
 .text-info {
-    .text-emphasis-variant(@state-info-text);
+    .text-emphasis-variant(@mark-info-text);
 }
 .text-warning {
-    .text-emphasis-variant(@state-warning-text);
+    .text-emphasis-variant(@mark-warning-text);
 }
 .text-danger {
-    .text-emphasis-variant(@state-danger-text);
+    .text-emphasis-variant(@mark-danger-text);
 }
 
 // Contextual backgrounds 文本背景设定
@@ -173,19 +178,24 @@ em,
 .bg-primary {
     // Given the contrast here, this is the only class to have its color inverted
     // automatically.
-    .bg-variant(@brand-primary);
+    .text-variant(@mark-primary-text);
+    .bg-variant(@mark-primary-bg);
 }
 .bg-success {
-    .bg-variant(@state-success-bg);
+    .text-variant(@mark-success-text);
+    .bg-variant(@mark-success-bg);
 }
 .bg-info {
-    .bg-variant(@state-info-bg);
+    .text-variant(@mark-info-text);
+    .bg-variant(@mark-info-bg);
 }
 .bg-warning {
-    .bg-variant(@state-warning-bg);
+    .text-variant(@mark-warning-text);
+    .bg-variant(@mark-warning-bg);
 }
 .bg-danger {
-    .bg-variant(@state-danger-bg);
+    .text-variant(@mark-danger-text);
+    .bg-variant(@mark-danger-bg);
 }
 
 
@@ -197,12 +207,24 @@ ul,
 ol {
     margin-top: 0;
     margin-bottom: (@line-height-computed / 2);
-    
-    border-left: 5px ridge #C3C3C3 ;
+    border-left: 3px solid white;
     
     ul,
     ol {
         margin-bottom: 0;
+    }
+
+    &>:first-child {
+        border-top: 1px solid white;
+    }
+    
+    > li {
+        border-bottom: 1px solid white;
+        padding: 5px 0px 5px 10px;
+        
+        &:hover{
+            background: rgba(255,255,255,0.5);
+        }
     }
 }
 
@@ -238,13 +260,16 @@ dd {
 dt {
     font-weight: bold;
     font-size: @font-size-large;
+    border-bottom: 1px solid white;
+    padding: 5px 0;
 }
 dd {
-    margin-left: 0; // Undo browser default
-    padding-left: 20px;
+    margin-left: 20px; // Undo browser default
+    padding: 5px 10px;
+    
 }
 
-// Horizontal description lists
+// Horizontal description lists 横向的描述清单
 //
 // Defaults to being stacked without any of the below styles applied, until the
 // grid breakpoint is reached (default of ~768px).
@@ -283,7 +308,7 @@ abbr[data-original-title] {
     .text-uppercase();
 }
 
-// Blockquotes
+// Blockquotes 引用
 blockquote {
     padding: (@line-height-computed / 2) @line-height-computed;
     margin: 0 0 @line-height-computed;
@@ -292,7 +317,7 @@ blockquote {
     background-color:  #FDF7F7;
     
     &:hover {
-	background: #DEDFFF;
+        background: #DEDFFF;
     }
     p,
     ul,
@@ -345,4 +370,18 @@ address {
     margin-bottom: @line-height-computed;
     font-style: normal;
     line-height: @line-height-base;
+}
+
+// 批注
+
+aside {
+    background-color: #FDF7F7;
+
+    padding: 10px 10px 10px 10px;
+    border-left: 8px double gold;
+    transition: @transition-normal;
+    
+    &:hover {
+    background-color: #C0FFC0;
+    }
 }
