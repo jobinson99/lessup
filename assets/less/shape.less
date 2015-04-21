@@ -1,11 +1,13 @@
-// 常用形状
+//== 常用形状
 
+// 箭头
 .shape-primary,
 .shape-success,
+.shape-fail,
 .shape-todo,
 .shape-done,
 .shape-present {
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .shape-primary,
@@ -17,14 +19,19 @@
 .shape-success:after{
     background-color: @mark-success-bg;
 }
+.shape-fail,
+.shape-fail:after {
+    background-color: @mark-fail-bg;
+}
 
 .shape-todo,
 .shape-todo:after {
     background-color: @mark-good-bg;
 }
+
 .shape-done,
 .shape-done:after {
-    background-color: @mark-bad-bg;
+    background-color: @mark-done-bg;
 }
 
 .shape-present,
@@ -36,6 +43,7 @@
 .shape-success:after,
 .shape-todo:after,
 .shape-done:after,
+.shape-fail:after,
 .shape-present:after {
     border-bottom: 11px solid @body-bg;
     border-top: 11px solid @body-bg;
@@ -44,6 +52,28 @@
     width: 0;
     content: "";
     position: absolute;
+}
+
+// 冒泡对话框
+
+.bubble-normal {
+    padding: 50px;
+   background: green;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+}
+.bubble-normal:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid green;
+   border-bottom: 13px solid transparent;
 }
 
 
