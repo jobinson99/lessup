@@ -23,7 +23,7 @@
 }
 
 
-// Visibility utilities
+// Visibility utilities 设置不同屏幕下元素 可见和不可见
 // Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
 .visible-xs,
 .visible-sm,
@@ -152,8 +152,7 @@
   }
 }
 
-
-// Print utilities
+// Print utilities 打印模式下，元素的隐藏和显示
 //
 // Media queries are placed on the inside to be mixin-friendly.
 
@@ -192,3 +191,42 @@
     .responsive-invisibility();
   }
 }
+
+
+// 设置大小屏幕下，元素的位置变化：沉底，浮顶
+
+.fixed-top {
+    position: fixed;
+    display: block;
+    top: 0;
+}
+
+.fixed-bottom {
+    position: fixed;
+    display:block;
+    bottom: 0;
+}
+.fixed-top-ex {
+    
+}
+.fixed-top-sm {
+    
+}
+.fixed-top-md {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      .fixed-top;
+  }
+}
+.fixed-top-lg {
+    
+}
+
+
+// 设置大小屏幕下，元素卷起和展开
+
+
+// 设置大小屏幕变化下，表格元素变化
+
+
+
+
