@@ -1,28 +1,33 @@
-// Button variants
+// Button variants 按钮颜色变化
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-.button-variant(@color; @background; @border) {
-  color: @color;
-  background-color: @background;
-  border-color: @border;
+// 四种状态，默认，移过，悬停，按住
+.button-variant(@color;@background;@color-hover;@bg-hover){
+    color: @color;
+    background-color: @background;
+    border-color: @background;
 
-  &:hover,
+    transition: @transition-fast;
+    
+    &:hover,
   &:focus,
   &.focus,
   &:active,
   &.active,
   .open > .dropdown-toggle& {
-    color: @color;
-    background-color: darken(@background, 10%);
-        border-color: darken(@border, 12%);
+      color: @color-hover;
+      background-color: @bg-hover;
+      border-color: @bg-hover;
   }
+
   &:active,
   &.active,
   .open > .dropdown-toggle& {
     background-image: none;
   }
+  
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
@@ -33,20 +38,19 @@
     &:active,
     &.active {
       background-color: @background;
-          border-color: @border;
+      border-color: @background;
     }
   }
-
-  .badge {
+    .badge {
     color: @background;
     background-color: @color;
   }
 }
 
-// Button sizes
-.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+
+// Button sizes 大小
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height) {
   padding: @padding-vertical @padding-horizontal;
   font-size: @font-size;
   line-height: @line-height;
-  border-radius: @border-radius;
 }

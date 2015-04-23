@@ -69,7 +69,6 @@
     <div class="bs-docs-header" id="content" tabindex="-1">
       <div class="container">
         <h1  class="page-header">CSS 页面大标题</h1>
-        <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
         <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><!--script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script --></div></div>
 
       </div>
@@ -101,51 +100,52 @@
   <h2 id="overview-type-links">Typography and links</h2>
   <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
   <ul>
-    <li>Set <code>background-color: #fff;</code> on the <code>body</code></li>
+    <li>设置 <code>body</code>为<code>background-color: #fff;</code>。</li>
     <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li>
-    <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li>
+    <li>Set the global link color via <code>@link-color</code>。</li>
   </ul>
-  <p>These styles can be found within <code>scaffolding.less</code>.</p>
+  <p>可在<i>scaffolding.less</i>中找到设置。</p>
 
   <h2 id="overview-normalize">重置样式 Normalize.css</h2>
-  <p>For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.</p>
+  <p>为提升兼容性，使用<a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> 和 <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>主持的<a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>重置了样式。</p>
+  
+<h2 id="animate-css">基本动画 animate.css</h2>
 
-  <h2 id="overview-container">Containers</h2>
-  <p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to <code>padding</code> and more, neither container is nestable.</p>
-  <p>Use <code>.container</code> for a responsive fixed width container.</p>
+  <h2 id="overview-container">容器 Containers</h2>
+  <p>使用容器来分割元素和纳入 动态布局内容。有两种容器可选用。Note that, due to <code>padding</code> and more, neither container is nestable.</p>
+  <p>特定宽度 ： <code>.container</code> for a responsive fixed width container.</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
-  <p>Use <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport.</p>
+  <p>全宽： <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport.</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 </div>
 
 <div class="bs-docs-section">
-  <h1 id="grid" class="page-header">Grid system</h1>
+  <h1 id="grid" class="page-header">灵活布局 Grid system</h1>
 
   <p class="lead">Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
 
-  <h2 id="grid-intro">Introduction</h2>
-  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+  <h2 id="grid-intro">介绍</h2>
+  <p>通过行rows 列columns设置，来实现灵活布局。</p>
   <ul>
-    <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
-    <li>Use rows to create horizontal groups of columns.</li>
+    <li>Rows 需要放在 <code>.container</code> (固定宽度 fixed-width) 或 <code>.container-fluid</code> ( full-width) ，里面可带 文本对齐方向和距离边框距离。</li>
+    <li>使用 rows  来创建 Horizontal的columns组 .</li>
     <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
     <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
     <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
     <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
     <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
-    <li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
+    <li>若一行中有超过12列，则多出的会被分到新行。</li>
     <li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any <code>.col-md-*</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-*</code> class is not present.</li>
   </ul>
-  <p>Look to the examples for applying these principles to your code.</p>
 
-  <h2 id="grid-media-queries">Media queries</h2>
+  <h2 id="grid-media-queries">根据屏幕大小 Media queries</h2>
   <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Extra small devices (phones, less than 768px) */</span>
-<span class="cm">/* No media query since this is the default in Bootstrap */</span>
+<span class="cm">/* 已经内置了一部分的media query，有需要可再自己定义 */</span>
 
 <span class="cm">/* Small devices (tablets, 768px and up) */</span>
 <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-sm-min</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
@@ -155,63 +155,62 @@
 
 <span class="cm">/* Large devices (large desktops, 1200px and up) */</span>
 <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-lg-min</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></div>
-  <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
+  <p>有时需要  <code>max-width</code>和  <code>min-width</code>  来更精细设置。</p>
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-xs-max</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-sm-min</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-sm-max</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-md-min</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-md-max</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-lg-min</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></div>
 
-  <h2 id="grid-options">Grid options</h2>
-  <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+  <h2 id="grid-options">参数 Grid options</h2>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
           <th></th>
           <th>
-            Extra small devices
-            <small>Phones (&lt;768px)</small>
+            超小屏幕 Extra small devices
+            <small>手机Phones (&lt;768px)</small>
           </th>
           <th>
-            Small devices
-            <small>Tablets (&ge;768px)</small>
+            小屏幕 Small devices
+            <small>平板Tablets (&ge;768px)</small>
           </th>
           <th>
-            Medium devices
-            <small>Desktops (&ge;992px)</small>
+            中等屏幕 Medium devices
+            <small>桌面 Desktops (&ge;992px)</small>
           </th>
           <th>
-            Large devices
-            <small>Desktops (&ge;1200px)</small>
+            大屏幕Large devices
+            <small>桌面 Desktops (&ge;1200px)</small>
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="text-nowrap" scope="row">Grid behavior</th>
+          <th class="text-nowrap" scope="row">行为 Grid behavior</th>
           <td>Horizontal at all times</td>
           <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Container width</th>
+          <th class="text-nowrap" scope="row">容器宽度 Container width</th>
           <td>None (auto)</td>
           <td>750px</td>
           <td>970px</td>
           <td>1170px</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Class prefix</th>
+          <th class="text-nowrap" scope="row">类名 前缀Class prefix</th>
           <td><code>.col-xs-</code></td>
           <td><code>.col-sm-</code></td>
           <td><code>.col-md-</code></td>
           <td><code>.col-lg-</code></td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row"># of columns</th>
+          <th class="text-nowrap" scope="row"># 总共多少列</th>
           <td colspan="4">12</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Column width</th>
+          <th class="text-nowrap" scope="row">每列宽度 Column width</th>
           <td class="text-muted">Auto</td>
           <td>~62px</td>
           <td>~81px</td>
@@ -222,12 +221,12 @@
           <td colspan="4">30px (15px on each side of a column)</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Nestable</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap" scope="row">互相嵌套</th>
+          <td colspan="4">可</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Offsets</th>
-          <td colspan="4">Yes</td>
+          <td colspan="4">yes</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Column ordering</th>
@@ -237,11 +236,11 @@
     </table>
   </div>
 
-  <h2 id="grid-example-basic">Example: Stacked-to-horizontal</h2>
-  <p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p>
+  <h2 id="grid-example-basic">示例 : Stacked-to-horizontal</h2>
+  <p>在<code>.row</code>中，使用一组 <code>.col-md-*</code>，来实现。you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. </p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
-      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1 1列</div>
       <div class="col-md-1">.col-md-1</div>
       <div class="col-md-1">.col-md-1</div>
       <div class="col-md-1">.col-md-1</div>
@@ -255,16 +254,16 @@
       <div class="col-md-1">.col-md-1</div>
     </div>
     <div class="row show-grid">
-      <div class="col-md-8">.col-md-8</div>
-      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-8">.col-md-8 8列8列8列8列8列8列8列8列8列8列</div>
+      <div class="col-md-4">.col-md-4 4列</div>
     </div>
     <div class="row show-grid">
-      <div class="col-md-4">.col-md-4</div>
-      <div class="col-md-4">.col-md-4</div>
-      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4 4列</div>
+      <div class="col-md-4">.col-md-4 4列</div>
+      <div class="col-md-4">.col-md-4 4列</div>
     </div>
     <div class="row show-grid">
-      <div class="col-md-6">.col-md-6</div>
+      <div class="col-md-6">.col-md-6 6列</div>
       <div class="col-md-6">.col-md-6</div>
     </div>
   </div>
@@ -296,8 +295,13 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>.col-md-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-  <h2 id="grid-example-fluid">Example: Fluid container</h2>
-  <p>Turn any fixed-width grid layout into a full-width layout by changing your outermost <code>.container</code> to <code>.container-fluid</code>.</p>
+  <h2 id="grid-example-fluid">示例：全宽 Fluid container </h2>
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-6">.col-md-6 全宽6</div>
+  <div class="col-md-6">.col-md-6 全宽6</div>
+</div>
+</div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     ...
@@ -1552,31 +1556,32 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 </div>
 
 <div class="bs-docs-section">
-  <h1 id="forms" class="page-header">Forms</h1>
+  <h1 id="forms" class="page-header">表单 Forms</h1>
 
   <h2 id="forms-example">Basic example</h2>
-  <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
+  <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> 
+  带 <code>.form-control</code> 的，将被设为 <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
   <div class="bs-example" data-example-id="basic-forms">
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <label for="exampleInputEmail1">电邮</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email输入电邮">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password输入密码">
       </div>
       <div class="form-group">
-        <label for="exampleInputFile">File input</label>
+        <label for="exampleInputFile">File input上传文件</label>
         <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
+        <p class="help-block">Example block-level help text here 帮助说明.</p>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Check me out
+          <input type="checkbox"> Check me out多选
         </label>
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default">Submit 提交</button>
     </form>
   </div><!-- /example -->
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
@@ -1601,27 +1606,27 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
   <div class="bs-callout bs-callout-warning" id="callout-formgroup-inputgroup">
-    <h4>Don't mix form groups with input groups</h4>
-    <p>Do not mix form groups directly with <a href="/components/#input-groups">input groups</a>. Instead, nest the input group inside of the form group.</p>
+    <h4>不并列混用 表单组合输入组</h4>
+    <p>Do not mix form groups directly with <a href="/components/#input-groups">input groups</a>. 而是在表单组 form groups 里，内嵌 输入组</p>
   </div>
 
 
-  <h2 id="forms-inline">Inline form</h2>
+  <h2 id="forms-inline">Inline form 行内表单</h2>
   <p>Add <code>.form-inline</code> to your form (which doesn't have to be a <code>&lt;form&gt;</code>) for left-aligned and inline-block controls. <strong>This only applies to forms within viewports that are at least 768px wide.</strong></p>
   <div class="bs-callout bs-callout-danger" id="callout-inline-form-width">
-    <h4>May require custom widths</h4>
-    <p>Inputs and selects have <code>width: 100%;</code> applied by default in Bootstrap. Within inline forms, we reset that to <code>width: auto;</code> so multiple controls can reside on the same line. Depending on your layout, additional custom widths may be required.</p>
+    <h4>可能需要 根据需要 设定 宽度</h4>
+    <p>默认 Inputs 和 selects <code>width: 100%;</code> 。行内的设为 <code>width: auto;</code> 。</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-inline-form-labels">
-    <h4>Always add labels</h4>
-    <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the <code>.sr-only</code> class. There are further alternative methods of providing a label for assistive technologies, such as the <code>aria-label</code>, <code>aria-labelledby</code> or <code>title</code> attribute. If none of these is present, screen readers may resort to using the <code>placeholder</code> attribute, if present, but note that use of <code>placeholder</code> as a replacement for other labelling methods is not advised.</p>
+    <h4>加提示信息 labels</h4>
+    <p> 行内表单用<code>.sr-only</code> 来把信息隐藏. 还有其他的提示信息办法，比如<code>aria-label</code>, <code>aria-labelledby</code> or <code>title</code> attribute. If none of these is present, screen readers may resort to using the <code>placeholder</code> attribute, if present, but note that use of <code>placeholder</code> as a replacement for other labelling methods is not advised.</p>
   </div>
 
   <div class="bs-example" data-example-id="simple-form-inline">
     <form class="form-inline">
       <div class="form-group">
         <label for="exampleInputName2">Name</label>
-        <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+        <input type="text" class="form-control" id="exampleInputName2" placeholder="用 placeholder Jane Doe">
       </div>
       <div class="form-group">
         <label for="exampleInputEmail2">Email</label>
@@ -1764,37 +1769,34 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
 
-  <h2 id="forms-controls">Supported controls</h2>
-  <p>Examples of standard form controls supported in an example form layout.</p>
-
-  <h3>Inputs</h3>
+  <h2 id="forms-controls">支持的输入类型 Supported controls</h2>
   <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
-  <div class="bs-callout bs-callout-danger" id="callout-input-needs-type">
-    <h4>Type declaration required</h4>
-    <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p>
-  </div>
+  <p>只要设定<code>type</code>即可。注意有些浏览器不支持 </p>
+
   <div class="bs-example" data-example-id="text-form-control">
     <form>
-      <input type="text" class="form-control" placeholder="Text input">
+	  <input type="date" placeholder="日期">
+  <input type="datetime" placeholder="日期时间">
+      <input type="text" class="form-control" placeholder="文本Text input">
     </form>
   </div><!-- /.bs-example -->
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Text input"</span><span class="nt">&gt;</span></code></pre></div>
   <div class="bs-callout bs-callout-info" id="callout-xref-input-group">
-    <h4>Input groups</h4>
+    <h4>输入组 Input groups</h4>
     <p>To add integrated text or buttons before and/or after any text-based <code>&lt;input&gt;</code>, <a href="../components/#input-groups">check out the input group component</a>.</p>
   </div>
 
-  <h3>Textarea</h3>
-  <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+  <h3>文本编辑区 Textarea</h3>
+  <p>表单组支持多行文本编辑，只要设定行数<code>rows</code> 即可。</p>
   <div class="bs-example" data-example-id="textarea-form-control">
     <form>
-      <textarea class="form-control" rows="3" placeholder="Textarea"></textarea>
+      <textarea class="form-control" rows="3" placeholder="文本编辑区Textarea"></textarea>
     </form>
   </div><!-- /.bs-example -->
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span></code></pre></div>
 
-  <h3>Checkboxes and radios</h3>
-  <p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
+  <h3>多选和单选 Checkboxes and radios</h3>
+
   <p>A checkbox or radio with the <code>disabled</code> attribute will be styled appropriately. To have the <code>&lt;label&gt;</code> for the checkbox or radio also display a "not-allowed" cursor when the user hovers over the label, add the <code>.disabled</code> class to your <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code>, <code>.checkbox-inline</code>, or <code>&lt;fieldset&gt;</code>.</p>
   <h4>Default (stacked)</h4>
   <div class="bs-example" data-example-id="block-checkboxes-radios">
@@ -1808,7 +1810,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
       <div class="checkbox disabled">
         <label>
           <input type="checkbox" value="" disabled>
-          Option two is disabled
+          被封禁Option two is disabled
         </label>
       </div>
       <br>
@@ -1827,7 +1829,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
       <div class="radio disabled">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-          Option three is disabled
+          被封禁Option three is disabled
         </label>
       </div>
     </form>
@@ -2526,15 +2528,15 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 </div>
 
 <div class="bs-docs-section">
-  <h1 id="buttons" class="page-header">Buttons</h1>
+  <h1 id="buttons" class="page-header">按钮 Buttons</h1>
 
   <h2 id="buttons-tags">Button tags</h2>
-  <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+  <p>按钮类可用于<code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> 。</p>
   <form class="bs-example" data-example-id="btn-tags">
-    <a class="btn btn-default" href="#" role="button">Link</a>
-    <button class="btn btn-default" type="submit">Button</button>
-    <input class="btn btn-default" type="button" value="Input">
-    <input class="btn btn-default" type="submit" value="Submit">
+    <a class="btn btn-default" href="#" role="button">连接 Link</a>
+    <button class="btn btn-default" type="submit">按钮 Button</button>
+    <input class="btn btn-default" type="button" value="输入Input">
+    <input class="btn btn-default" type="submit" value="提交Submit">
   </form>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
@@ -2542,23 +2544,18 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span><span class="nt">&gt;</span></code></pre></div>
 
   <div class="bs-callout bs-callout-warning" id="callout-buttons-context-usage">
-    <h4>Context-specific usage</h4>
-    <p>While button classes can be used on <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements, only <code>&lt;button&gt;</code> elements are supported within our nav and navbar components.</p>
-  </div>
+    <p>导航和导航条上，只有<code>&lt;button&gt;</code>会起作用，<code>&lt;a&gt;</code>会变成其他的。 While button classes can be used on  and <code>&lt;button&gt;</code> elements, only <code>&lt;button&gt;</code> elements are supported within our nav and navbar components.</p>
+	
+    <p>若连接 <code>&lt;a&gt;</code>也当按钮用，而且不是用于连接到其他页面或者本页面的某部分，需要加<code>role="button"</code>
+	– triggering in-page functionality。</p>
+跨浏览器按钮渲染：<strong>尽可能使用 <code>&lt;button&gt;</code>
+</strong>，这样可以减少渲染量，提高兼容性。</p>
 
-  <div class="bs-callout bs-callout-warning" id="callout-buttons-anchor-accessibility">
-    <h4>Links acting as buttons</h4>
-    <p>If the <code>&lt;a&gt;</code> elements are used to act as buttons – triggering in-page functionality, rather than navigating to another document or section within the current page – they should also be given an appropriate <code>role="button"</code>.</p>
-  </div>
-
-  <div class="bs-callout bs-callout-warning" id="callout-buttons-ff-height">
-    <h4>Cross-browser rendering</h4>
-    <p>As a best practice, <strong>we highly recommend using the <code>&lt;button&gt;</code> element whenever possible</strong> to ensure matching cross-browser rendering.</p>
     <p>Among other things, there's <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451">a bug in Firefox &lt;30</a> that prevents us from setting the <code>line-height</code> of <code>&lt;input&gt;</code>-based buttons, causing them to not exactly match the height of other buttons on Firefox.</p>
   </div>
 
-  <h2 id="buttons-options">Options</h2>
-  <p>Use any of the available button classes to quickly create a styled button.</p>
+  <h2 id="buttons-options">按钮样式</h2>
+
   <div class="bs-example" data-example-id="btn-variants">
     <button type="button" class="btn btn-default">Default</button>
     <button type="button" class="btn btn-primary">Primary</button>
@@ -2586,7 +2583,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="c">&lt;!-- Indicates a dangerous or potentially negative action --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
 
-<span class="c">&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;</span>
+<span class="c">&lt;!-- 不强调按钮，使得其变成一个连接样，虽然行为方式还是按钮 --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div>
 
   <div class="bs-callout bs-callout-warning" id="callout-buttons-color-accessibility">
@@ -2594,23 +2591,23 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     <p>Using color to add meaning to a button only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the visible text of the button), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
   </div>
 
-  <h2 id="buttons-sizes">Sizes</h2>
-  <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
+  <h2 id="buttons-sizes">按钮大小</h2>
+  <p>四个大小：默认 <code>.btn-lg</code>, <code>.btn-sm</code>, 和 <code>.btn-xs</code> </p>
   <div class="bs-example" data-example-id="btn-sizes">
     <p>
-      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <button type="button" class="btn btn-primary btn-lg">大按钮</button>
       <button type="button" class="btn btn-default btn-lg">Large button</button>
     </p>
     <p>
-      <button type="button" class="btn btn-primary">Default button</button>
+      <button type="button" class="btn btn-primary">默认大小按钮</button>
       <button type="button" class="btn btn-default">Default button</button>
     </p>
     <p>
-      <button type="button" class="btn btn-primary btn-sm">Small button</button>
+      <button type="button" class="btn btn-primary btn-sm">小按钮</button>
       <button type="button" class="btn btn-default btn-sm">Small button</button>
     </p>
     <p>
-      <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
+      <button type="button" class="btn btn-primary btn-xs">特别小按钮</button>
       <button type="button" class="btn btn-default btn-xs">Extra small button</button>
     </p>
   </div>
@@ -2631,7 +2628,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-xs"</span><span class="nt">&gt;</span>Extra small button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span></code></pre></div>
 
-  <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
+  <p>加 <code>.btn-block</code>，块 按钮</p>
   <div class="bs-example" data-example-id="block-btns">
     <div class="well center-block" style="max-width: 400px;">
       <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
@@ -2642,50 +2639,46 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg btn-block"</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span></code></pre></div>
 
 
-  <h2 id="buttons-active">Active state</h2>
-  <p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. For <code>&lt;button&gt;</code> elements, this is done via <code>:active</code>. For <code>&lt;a&gt;</code> elements, it's done with <code>.active</code>. However, you may use <code>.active</code> on <code>&lt;button&gt;</code>s (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the active state programmatically.</p>
+  <h2 id="buttons-active">活跃状态 Active state</h2>
+  <p>点住状态：背景变黑，边框变黑，inset shadow。For <code>&lt;button&gt;</code> elements, this is done via <code>:active</code>. For <code>&lt;a&gt;</code> elements, it's done with <code>.active</code>. However, you may use <code>.active</code> on <code>&lt;button&gt;</code>s (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the active state programmatically.</p>
 
-  <h3>Button element</h3>
-  <p>No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.</p>
+  <h3>加状态 Button element</h3>
+  <p>一般不需要加<code>:active</code> ，但如果有需要的话，比如用于提示下一步操作，可加<code>.active</code>。</p>
   <p class="bs-example" data-example-id="active-button-btns">
-    <button type="button" class="btn btn-primary btn-lg active">Primary button</button>
-    <button type="button" class="btn btn-default btn-lg active">Button</button>
+    <button type="button" class="btn btn-primary btn-lg active">聚焦状态Primary button</button>
+    <button type="button" class="btn btn-default btn-lg active">默认状况下的聚焦状态 Button</button>
   </p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg active"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg active"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></code></pre></div>
 
-  <h3>Anchor element</h3>
+  <h3>连接之 按钮 Anchor element</h3>
   <p>Add the <code>.active</code> class to <code>&lt;a&gt;</code> buttons.</p>
   <p class="bs-example" data-example-id="active-anchor-btns">
-    <a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
-    <a href="#" class="btn btn-default btn-lg active" role="button">Link</a>
+    <a href="#" class="btn btn-primary btn-lg active" role="button">聚焦状态 Primary link</a>
+    <a href="#" class="btn btn-default btn-lg active" role="button">默认状况下的聚焦状态Link</a>
   </p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span></code></pre></div>
 
 
-  <h2 id="buttons-disabled">Disabled state</h2>
-  <p>Make buttons look unclickable by fading them back with <code>opacity</code>.</p>
+  <h2 id="buttons-disabled">不可用状态 Disabled state</h2>
+  <p>是使用透明度<code>opacity</code>来设置.</p>
 
-  <h3>Button element</h3>
   <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
   <p class="bs-example" data-example-id="disabled-button-btns">
-    <button type="button" class="btn btn-primary btn-lg" disabled="disabled">Primary button</button>
-    <button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
+    <button type="button" class="btn btn-primary btn-lg" disabled="disabled">不可用状态 Primary button</button>
+    <button type="button" class="btn btn-default btn-lg" disabled="disabled">不可用状态 Button</button>
   </p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-primary"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></code></pre></div>
 
   <div class="bs-callout bs-callout-danger" id="callout-buttons-ie-disabled">
-    <h4>Cross-browser compatibility</h4>
-    <p>If you add the <code>disabled</code> attribute to a <code>&lt;button&gt;</code>, Internet Explorer 9 and below will render text gray with a nasty text-shadow that we cannot fix.</p>
-  </div>
 
-  <h3>Anchor element</h3>
+  <h3>连接不可用状态 Anchor element</h3>
   <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
   <p class="bs-example" data-example-id="disabled-anchor-btns">
-    <a href="#" class="btn btn-primary btn-lg disabled" role="button">Primary link</a>
-    <a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a>
+    <a href="#" class="btn btn-primary btn-lg disabled" role="button">连接不可用状态Primary link</a>
+    <a href="#" class="btn btn-default btn-lg disabled" role="button">连接不可用状态 Link</a>
   </p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg disabled"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg disabled"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span></code></pre></div>
@@ -2693,14 +2686,16 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.
   </p>
   <div class="bs-callout bs-callout-warning" id="callout-buttons-disabled-anchor">
-    <h4>Link functionality caveat</h4>
-    <p>This class uses <code>pointer-events: none</code> to try to disable the link functionality of <code>&lt;a&gt;</code>s, but that CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11. In addition, even in browsers that do support <code>pointer-events: none</code>, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, use custom JavaScript to disable such links.</p>
+    <h4>潜在问题：不可用连接 Link functionality caveat</h4>
+    <p>This class uses <code>pointer-events: none</code> to try to disable the link functionality of <code>&lt;a&gt;</code>s, but that CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11. 
+	即使支持<code>pointer-events: none</code>，也只是鼠标，键盘切换仍然可用。——所以，一般使用js来全面禁用。</p>
   </div>
 
 </div>
 
 <div class="bs-docs-section">
-<h2>常用形状</h2>
+
+<h1 id="shape" class="page-header">常用形状</h1>
 
 <p>
 <span class="shape-primary">一般</span>
@@ -2714,28 +2709,31 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="bubble-normal">对话</span>
 </p>
 
+</div>
 
-  <h1 id="images" class="page-header">Images</h1>
+<div class="bs-docs-section">
+  <h1 id="images" class="page-header">图像 Images</h1>
 
-  <h2 id="images-responsive">Responsive images</h2>
-  <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code>, <code>height: auto;</code> and <code>display: block;</code> to the image so that it scales nicely to the parent element.</p>
-  <p>To center images which use the <code>.img-responsive</code> class, use <code>.center-block</code> instead of <code>.text-center</code>. <a href="../css/#helper-classes-center">See the helper classes section</a> for more details about <code>.center-block</code> usage.</p>
+  <h2 id="images-responsive">响应式 图片 Responsive images</h2>
+  <p>加 <code>.img-responsive</code>类 可以让图片 适应屏幕大小变化
+  ：这个设置了 <code>max-width: 100%;</code>, <code>height: auto;</code>和<code>display: block;</code>，这样会根据父类大小变化显示尺寸。</p>
+  <p>对使用了 <code>.img-responsive</code>  的图像，想要居中，可以加<code>.center-block</code>，注意，不是 <code>.text-center</code>. <a href="../css/#helper-classes-center">See the helper classes section</a> for more details about <code>.center-block</code> usage.</p>
   <div class="bs-callout bs-callout-warning" id="callout-images-ie-svg">
     <h4>SVG images and IE 8-10</h4>
-    <p>In Internet Explorer 8-10, SVG images with <code>.img-responsive</code> are disproportionately sized. To fix this, add <code>width: 100% \9;</code> where necessary. Bootstrap doesn't apply this automatically as it causes complications to other image formats.</p>
+    <p>In Internet Explorer 8-10, SVG images with <code>.img-responsive</code> are disproportionately sized. To fix this, add <code>width: 100% \9;</code> where necessary. 默认没有设置这个，以避免其他图像格式的处理复杂化</p>
   </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-responsive"</span> <span class="na">alt=</span><span class="s">"Responsive image"</span><span class="nt">&gt;</span></code></pre></div>
 
-  <h2 id="images-shapes">Image shapes</h2>
+  <h2 id="images-shapes">图像外观 Image shapes</h2>
   <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
   <div class="bs-callout bs-callout-danger" id="callout-images-ie-rounded-corners">
-    <h4>Cross-browser compatibility</h4>
-    <p>Keep in mind that Internet Explorer 8 lacks support for rounded corners.</p>
+    <h4>跨浏览器兼容性 Cross-browser compatibility</h4>
+    <p>ie8缺少圆角支持。</p>
   </div>
   <div class="bs-example bs-example-images" data-example-id="image-shapes">
-    <img data-src="holder.js/140x140" class="img-rounded" alt="A generic square placeholder image with rounded corners">
-    <img data-src="holder.js/140x140" class="img-circle" alt="A generic square placeholder image where only the portion within the circle circumscribed about said square is visible">
-    <img data-src="holder.js/140x140" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+    <img data-src="holder.js/140x140/sky/text:hoder.js" class="img-rounded" alt="A generic square placeholder image with rounded corners">
+    <img data-src="holder.js/140x140/vine" class="img-circle" alt="A generic square placeholder image where only the portion within the circle circumscribed about said square is visible">
+    <img data-src="holder.js/140x140/lava" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
   </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-rounded"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-circle"</span><span class="nt">&gt;</span>
@@ -2743,17 +2741,18 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 </div>
 
 <div class="bs-docs-section">
-  <h1 id="helper-classes" class="page-header">Helper classes</h1>
+  <h1 id="helper-classes" class="page-header">辅助  classes</h1>
 
-  <h3 id="helper-classes-colors">Contextual colors</h3>
+  <h3 id="helper-classes-colors">Contextual colors文本前景色 </h3>
   <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
   <div class="bs-example" data-example-id="contextual-colors-helpers">
-    <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-    <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-    <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-    <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-    <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+  <p class="text-comment">p class="text-comment"</p>
+    <p class="text-muted">p class="text-muted"</p>
+    <p class="text-primary">p  class="text-primary"</p>
+    <p class="text-success">p class="text-success"</p>
+    <p class="text-info">p class="text-info"</p>
+    <p class="text-warning">p class="text-warning"</p>
+    <p class="text-danger">p class="text-danger"</p>
   </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
@@ -2770,14 +2769,16 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the contextual colors are only used to reinforce meaning that is already present in the text/markup), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
   </div>
 
-  <h3 id="helper-classes-backgrounds">Contextual backgrounds</h3>
+  <h3 id="helper-classes-backgrounds">文本背景 Contextual backgrounds</h3>
   <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.</p>
   <div class="bs-example bs-example-bg-classes" data-example-id="contextual-backgrounds-helpers">
-    <p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-    <p class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-    <p class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-    <p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+  
+    <p class="bg-primary">p class="bg-primary"</p>
+    <p class="bg-success">p class="bg-success"</p>
+    <p class="bg-info">p class="bg-info"</p>
+    <p class="bg-warning">p class="bg-warning"</p>
+    <p class="bg-danger">p class="bg-danger"</p>
+	    
   </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
@@ -2785,15 +2786,11 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span></code></pre></div>
   <div class="bs-callout bs-callout-info" id="callout-helper-bg-specificity">
-    <h4>Dealing with specificity</h4>
-    <p>Sometimes contextual background classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a <code>&lt;div&gt;</code> with the class.</p>
-  </div>
-  <div class="bs-callout bs-callout-warning" id="callout-helper-bg-accessibility">
-    <h4>Conveying meaning to assistive technologies</h4>
-    <p>As with <a href="#helper-classes-colors">contextual colors</a>, ensure that any meaning conveyed through color is also conveyed in a format that is not purely presentational.</p>
+    <p>Dealing with specificity：Sometimes contextual background classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a <code>&lt;div&gt;</code> with the class.</p>
+    <p>Conveying meaning to assistive technologies：As with <a href="#helper-classes-colors">contextual colors</a>, ensure that any meaning conveyed through color is also conveyed in a format that is not purely presentational.</p>
   </div>
 
-  <h3 id="helper-classes-close">Close icon</h3>
+  <h3 id="helper-classes-close">关闭 Close icon</h3>
   <p>Use the generic close icon for dismissing content like modals and alerts.</p>
   <div class="bs-example" data-example-id="close-icon">
     <p><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>
@@ -2801,7 +2798,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;/button&gt;</span></code></pre></div>
 
 
-  <h3 id="helper-classes-carets">Carets</h3>
+  <h3 id="helper-classes-carets">箭头 Carets</h3>
   <p>Use carets to indicate dropdown functionality and direction. Note that the default caret will reverse automatically in <a href="../components/#btn-dropdowns-dropup">dropup menus</a>.</p>
   <div class="bs-example" data-example-id="caret">
     <span class="caret"></span>
@@ -2811,6 +2808,9 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 
   <h3 id="helper-classes-floats">Quick floats</h3>
   <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p>
+  
+  <div class="pull-left">...飞左</div>
+<div class="pull-right">...飞右</div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-right"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></div>
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Classes
@@ -2830,22 +2830,23 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="p">}</span></code></pre></div>
 
   <div class="bs-callout bs-callout-warning" id="callout-helper-pull-navbar">
-    <h4>Not for use in navbars</h4>
-    <p>To align components in navbars with utility classes, use <code>.navbar-left</code> or <code>.navbar-right</code> instead. <a href="../components/#navbar-component-alignment">See the navbar docs</a> for details.</p>
+    <p>这个不用于导航条navbars ，导航条中的 文字对齐，使用<code>.navbar-left</code> or <code>.navbar-right</code> 。<a href="../components/#navbar-component-alignment">See the navbar docs</a> for details.</p>
   </div>
 
 
-  <h3 id="helper-classes-center">Center content blocks</h3>
+  <h3 id="helper-classes-center">块 居中 Center content blocks</h3>
   <p>Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a mixin and class.</p>
+  <div class="center-block">模块居中？</div>
+  
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center-block"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></div>
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Class
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Class 设定
 </span><span class="nc">.center-block</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
   <span class="nl">margin-left</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
   <span class="nl">margin-right</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// Usage as a mixin
+<span class="c1">// 在mixin中的使用方法
 </span><span class="nc">.element</span> <span class="p">{</span>
   <span class="nc">.center-block</span><span class="o">()</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
@@ -2873,7 +2874,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="p">}</span></code></pre></div>
 
 
-  <h3 id="helper-classes-show-hide">Showing and hiding content</h3>
+  <h3 id="helper-classes-show-hide">显示和隐藏元素 Showing and hiding content</h3>
   <p>Force an element to be shown or hidden (<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href="#helper-classes-floats">quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p>
   <p><code>.hide</code> is available, but it does not always affect screen readers and is <strong>deprecated</strong> as of v3.0.1. Use <code>.hidden</code> or <code>.sr-only</code> instead.</p>
   <p>Furthermore, <code>.invisible</code> can be used to toggle only the visibility of an element, meaning its <code>display</code> is not modified and the element can still affect the flow of the document.</p>

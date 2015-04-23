@@ -22,65 +22,79 @@
 
 
 //== 几种常见意义 前景背景需要颜色搭配，图标添加，悬停效果：关联 按钮（带图标），段落，文内，表格等。
+// 这里要设置反色，高亮色。
 
-@mark-primary-text: @gray-darker;// 基本
-@mark-primary-bg: #0FF;
-@mark-primary-text-hover:;
-@mark-primary-hover-bg:;
+@mark-default-text: @gray-dark;// 默认
+@mark-default-bg: #fff;
+@mark-default-text-hover:white;
+@mark-default-bg-hover:blue;
+@mark-default-icon:;
+
+
+@mark-primary-text: white;// 基本
+@mark-primary-bg: @brand-primary;
+@mark-primary-text-hover: @gray-darker;
+@mark-primary-bg-hover: yellow;
 @mark-primary-icon:;
+
+@mark-ignore-text: @gray;// 可忽略
+@mark-ignore-bg: @gray-light;
+@mark-ignore-text-hover: @gray-light;
+@mark-ignore-bg-hover: @gray;
+@mark-ignore-icon:;
 
 @mark-info-text: @gray-darker;// 需要注意
 @mark-info-bg: #0F0;
-@mark-info-text-hover:;
-@mark-info-hover-bg:;
+@mark-info-text-hover: white;
+@mark-info-bg-hover: blue;
 @mark-info-icon:;
 
 @mark-bad-text: @gray-darker;// 不好
-@mark-bad-bg: #F9C;
-@mark-bad-text-hover: ;
-@mark-bad-hover-bg: ;
+@mark-bad-bg:  @gray-light;
+@mark-bad-text-hover: white;
+@mark-bad-bg-hover: @gray-darker;
 @mark-bad-icon:;
 
 @mark-good-text: @gray-darker;// 好事
 @mark-good-bg:#FC9;
-@mark-good-text-hover:;
-@mark-good-hover-bg:;
+@mark-good-text-hover: white;
+@mark-good-bg-hover: brown;
 @mark-goog-icon:;
 
 @mark-todo-text: white;// 待办
 @mark-todo-bg:@brand-primary;
-@mark-todo-text-hover:;
-@mark-todo-hover-bg:;
+@mark-todo-text-hover: black;
+@mark-todo-bg-hover: @gray-lighter;
 @mark-todo-icon:;
 
 @mark-done-text: white;// 已完成
 @mark-done-bg: brown;
 @mark-done-text-hover:;
-@mark-done-hover-bg:;
+@mark-done-bg-hover:;
 @mark-done-icon:;
 
 @mark-fail-text: white;// 任务失败
 @mark-fail-bg:@gray;
 @mark-fail-text-hover:;
-@mark-fail-hover-bg:;
+@mark-fail-bg-hover:;
 @mark-fail-icon:;
 
 @mark-success-text: @gray-dark;// 完成
 @mark-success-bg: yellow;
-@mark-success-text-hover:;
-@mark-success-hover-bg:;
+@mark-success-text-hover: white;
+@mark-success-bg-hover: green;
 @mark-success-icon:;
 
 @mark-danger-text: red;// 危险
 @mark-danger-bg: brown;
-@mark-danger--text-hover:;
-@mark-danger-hover-bg:;
+@mark-danger-text-hover: white;
+@mark-danger-bg-hover: red;
 @mark-danger-icon:;
 
 @mark-warning-text: black;// 警告
 @mark-warning-bg: red;
-@mark-warning-text-hover: ;
-@mark-warning-hover-bg:;
+@mark-warning-text-hover: white;
+@mark-warning-bg-hover: black;
 @mark-warning-icon:;
 
 //== 表情设定
@@ -112,18 +126,18 @@
 @text-color:            @gray-darker;
 
 //** Global textual link color.
-@link-color:            #303030;
+@link-color:           @gray-dark;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      white;
 @link-focus-color:		black;
 @link-visited-color:		@gray-lighter;
 //** Link hover decoration.
 @link-hover-decoration: none;
-//** Link shadow.
+//** 连接文字阴影
 @link-shadow:		0px 0px 10px black;
-@link-hover-shadow:	0px 0px 10px blue;
-@link-active-shadow:	0px 0px 10px gold;
-@link-visited-shadow:	0px 0px 15px #585858;
+@link-hover-shadow:	0px 0px 9px blue;
+@link-active-shadow:	0px 0px 9px gold;
+@link-visited-shadow:	0px 0px 9px @gray;
 @link-none-shadow:	none;
 
 
@@ -230,33 +244,33 @@
 
 //== 按钮
 //
-//## For each  buttons, define text, background and border color.
+//## 悬停和聚焦需要反色显示
 
 @btn-font-weight:                normal;
 
 @btn-default-color:              #333;
 @btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+@btn-default-border:             #fff;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-border:           @btn-primary-bg;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
-@btn-success-border:             darken(@btn-success-bg, 5%);
+@btn-success-border:         @btn-success-bg;
 
 @btn-info-color:                 #fff;
 @btn-info-bg:                    @brand-info;
-@btn-info-border:                darken(@btn-info-bg, 5%);
+@btn-info-border:               @btn-info-bg;
 
 @btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
-@btn-warning-border:             darken(@btn-warning-bg, 5%);
+@btn-warning-border:         @btn-warning-bg;
 
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
-@btn-danger-border:              darken(@btn-danger-bg, 5%);
+@btn-danger-border:            @btn-danger-bg;
 
 @btn-link-disabled-color:        @gray-light;
 
@@ -288,7 +302,7 @@
 @input-border-focus:             #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder:        #999;
+@input-color-placeholder:        @gray-light;
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);

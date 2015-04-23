@@ -140,36 +140,40 @@ em,
     border-bottom: 1px dashed gray;
 }
 
-// Alignment
+// Alignment 对齐方向和单词截断
 .text-left           { text-align: left; }
 .text-right          { text-align: right; }
 .text-center         { text-align: center; }
 .text-justify        { text-align: justify; }
 .text-nowrap         { white-space: nowrap; }
 
-// Transformation
+// Transformation 大小写转换
 .text-lowercase      { text-transform: lowercase; }
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
 
 // Contextual colors 特殊文本 颜色
+.text-comment {
+    .text-emphasis-variant(@mark-ignore-bg);
+}
+
 .text-muted {
-    color: @mark-info-text;
+    .text-emphasis-variant(@mark-info-bg);
 }
 .text-primary {
     .text-emphasis-variant(@mark-primary-text);
 }
 .text-success {
-    .text-emphasis-variant(@mark-success-text);
+    .text-emphasis-variant(@mark-success-bg);
 }
 .text-info {
-    .text-emphasis-variant(@mark-info-text);
+    .text-emphasis-variant(@mark-info-bg);
 }
 .text-warning {
-    .text-emphasis-variant(@mark-warning-text);
+    .text-emphasis-variant(@mark-warning-bg);
 }
 .text-danger {
-    .text-emphasis-variant(@mark-danger-text);
+    .text-emphasis-variant(@mark-danger-bg);
 }
 
 // Contextual backgrounds 文本背景设定
