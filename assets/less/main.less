@@ -2,50 +2,49 @@
 @import "variables.less";
 @import "mixins.less";
 
-// Reset and dependencies
+// 重置样式和有关依赖
 @import "normalize.less";
 @import "print.less";
 @import "icons.less";
 
-// Core CSS
+// 布局相关
 @import "scaffolding.less";
 @import "type.less";
-@import "code.less";
 @import "grid.less";
-@import "tables.less";
-@import "forms.less";
-@import "buttons.less";
 
-// Components
-@import "component-animations.less";
-@import "dropdowns.less";
-@import "button-groups.less";
-@import "input-groups.less";
+// 内容区块
+@import "code.less";
+@import "tables.less";
 @import "navs.less";
 @import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
-@import "labels.less";
-@import "badges.less";
+@import "panels.less";
 @import "jumbotron.less";
 @import "thumbnails.less";
-@import "alerts.less";
-@import "progress-bars.less";
 @import "media.less";
-@import "list-group.less";
-@import "panels.less";
-@import "responsive-embed.less";
+
+// 组件
+@import "pagination.less";
+@import "alerts.less";
 @import "wells.less";
+@import "forms.less";
+@import "input-groups.less";
+@import "buttons.less";
+@import "button-groups.less";
+@import "component-animations.less";
+@import "dropdowns.less";
+@import "breadcrumbs.less";
+@import "labels.less";
+@import "badges.less";
+@import "progress-bars.less";
 @import "close.less";
 
-// Components w/ JavaScript
+// Components w/ JavaScript 需要js的
 @import "modals.less";
 @import "tooltip.less";
 @import "popovers.less";
 @import "carousel.less";
 
-// Utility classes
+// Utility classes 常用工具类
 @import "utilities.less";
 @import "responsive-utilities.less";
 
@@ -58,4 +57,8 @@
 @import "font-awesome.less";
 
 // 常用动画
+
+// 载入样式：在定制阶段不加此
+
+// @import "theme.less";
 

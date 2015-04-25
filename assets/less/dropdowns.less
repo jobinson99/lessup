@@ -1,9 +1,9 @@
 //
-// Dropdown menus 下拉菜单
+// Dropdown menus 上下拉菜单
 // --------------------------------------------------
 
 
-// Dropdown arrow/caret
+// Dropdown arrow/caret 画方向
 .caret {
   display: inline-block;
   width: 0;
@@ -15,7 +15,7 @@
   border-left:  @caret-width-base solid transparent;
 }
 
-// The dropdown wrapper (div)
+// The dropdown wrapper (div)  总容器
 .dropup,
 .dropdown {
   position: relative;
@@ -26,7 +26,7 @@
   outline: 0;
 }
 
-// The dropdown menu (ul)
+// The dropdown menu (ul) 拉出菜单
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -55,7 +55,7 @@
     left: auto;
   }
 
-  // Dividers (basically an hr) within the dropdown
+  // Dividers (basically an hr) within the dropdown 分割
   .divider {
     .nav-divider(@dropdown-divider-bg);
   }
@@ -69,6 +69,7 @@
     line-height: @line-height-base;
     color: @dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
+    text-shadow: @link-none-shadow;
   }
 }
 
@@ -79,6 +80,7 @@
     text-decoration: none;
     color: @dropdown-link-hover-color;
     background-color: @dropdown-link-hover-bg;
+    text-shadow: @link-none-shadow;
   }
 }
 
@@ -91,6 +93,7 @@
     text-decoration: none;
     outline: 0;
     background-color: @dropdown-link-active-bg;
+    text-shadow: @link-none-shadow;
   }
 }
 

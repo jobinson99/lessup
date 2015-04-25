@@ -1,6 +1,6 @@
-
 //
-// Load core variables and mixins
+// 定制样式
+// 需要先加载下面两个
 // --------------------------------------------------
 
 @import "variables.less";
@@ -8,7 +8,7 @@
 
 
 //
-// Buttons
+// 按钮
 // --------------------------------------------------
 
 // Common styles
@@ -79,7 +79,7 @@
 
 
 //
-// Images
+// 图像
 // --------------------------------------------------
 
 .thumbnail,
@@ -89,7 +89,7 @@
 
 
 //
-// Dropdowns
+// 下拉菜单
 // --------------------------------------------------
 
 .dropdown-menu > li > a:hover,
@@ -106,7 +106,7 @@
 
 
 //
-// Navbar
+// 导航条
 // --------------------------------------------------
 
 // Default navbar
@@ -166,7 +166,7 @@
 
 
 //
-// Alerts
+// 警示信息
 // --------------------------------------------------
 
 // Common styles
@@ -190,7 +190,7 @@
 
 
 //
-// Progress bars
+// 进度条
 // --------------------------------------------------
 
 // Give the progress background some depth
@@ -218,7 +218,7 @@
 
 
 //
-// List groups
+// 列表组
 // --------------------------------------------------
 
 .list-group {
@@ -270,4 +270,40 @@
   border-color: darken(@well-bg, 10%);
   @shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
   .box-shadow(@shadow);
+}
+
+// 附加效果
+// --------------------------------------------------
+
+// 动画
+
+
+// 文字效果
+
+
+
+// 测试没有预定用途的函数
+
+.span-outset,
+.span-inset {
+    .text-outset(lightblue, #6699CC);
+}
+.span-white-outset,
+.span-white-inset {
+    .text-outset(lightblue);
+}
+
+.span-3d {
+    .text-3d(#fff);
+}
+
+.span-shine-white {
+    .text-shine(#fff);
+}
+.span-shine-yellow {
+    .text-shine(yellow);
+}
+
+.span-flog {
+    .text-flog(#fff);
 }

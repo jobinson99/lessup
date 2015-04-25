@@ -1,88 +1,159 @@
 //
-// Pagination (multiple pages)
+// 分页
 // --------------------------------------------------
+
+// pagination 多页
+//  pager 前后
+
+
+.pagination,
+.pager {
+    margin: @line-height-computed 0;
+    padding-left: 0;
+
+    > li {
+        display: inline; // Remove list-style and block-level defaults
+
+        > a,
+        > span {
+            background-color: @pagination-bg;
+            border: 1px solid @pagination-border;
+            text-shadow: @link-none-shadow;
+
+            &:hover,
+            &:focus {
+                background-color: @pagination-hover-bg;
+                text-shadow: @link-none-shadow;
+            }
+        }
+
+        &:first-child {
+            > a,
+            > span {
+                .border-left-radius(@border-radius-base);
+            }
+        }
+        &:last-child {
+            > a,
+            > span {
+                .border-right-radius(@border-radius-base);
+            }
+        }
+        
+    }
+    
+    > .disabled {
+        > span,
+        > span:hover,
+        > span:focus,
+        > a,
+        > a:hover,
+        > a:focus {
+            color: @pagination-disabled-color;
+            background-color: @pagination-disabled-bg;
+            border-color: @pagination-disabled-border;
+            cursor: @cursor-disabled;
+        }
+    }
+    
+}
+
 .pagination {
-  display: inline-block;
-  padding-left: 0;
-  margin: @line-height-computed 0;
-  border-radius: @border-radius-base;
+    display: inline-block;
+    border-radius: @border-radius-base;
 
-  > li {
-    display: inline; // Remove list-style and block-level defaults
-    > a,
-    > span {
-      position: relative;
-      float: left; // Collapse white-space
-      padding: @padding-base-vertical @padding-base-horizontal;
-      line-height: @line-height-base;
-      text-decoration: none;
-      color: @pagination-color;
-      background-color: @pagination-bg;
-      border: 1px solid @pagination-border;
-      margin-left: -1px;
-    }
-    &:first-child {
-      > a,
-      > span {
-        margin-left: 0;
-        .border-left-radius(@border-radius-base);
-      }
-    }
-    &:last-child {
-      > a,
-      > span {
-        .border-right-radius(@border-radius-base);
-      }
-    }
-  }
+    > li {
+        > a,
+        > span {
+            position: relative;
+            float: left; // Collapse white-space
+            padding: @padding-base-vertical @padding-base-horizontal;
+            line-height: @line-height-base;
+            text-decoration: none;
+            color: @pagination-color;
+            margin-left: -1px;
 
-  > li > a,
-  > li > span {
-    &:hover,
-    &:focus {
-      color: @pagination-hover-color;
-      background-color: @pagination-hover-bg;
-      border-color: @pagination-hover-border;
-    }
-  }
+        }
+        &:first-child {
+            > a,
+            > span {
+                margin-left: 0;
+            }
+        }
 
-  > .active > a,
-  > .active > span {
-    &,
-    &:hover,
-    &:focus {
-      z-index: 2;
-      color: @pagination-active-color;
-      background-color: @pagination-active-bg;
-      border-color: @pagination-active-border;
-      cursor: default;
     }
-  }
 
-  > .disabled {
-    > span,
-    > span:hover,
-    > span:focus,
-    > a,
-    > a:hover,
-    > a:focus {
-      color: @pagination-disabled-color;
-      background-color: @pagination-disabled-bg;
-      border-color: @pagination-disabled-border;
-      cursor: @cursor-disabled;
+    > li > a,
+    > li > span {
+        &:hover,
+        &:focus {
+            color: @pagination-hover-color;
+            border-color: @pagination-hover-border;
+
+        }
     }
-  }
+
+    > .active > a,
+    > .active > span {
+        &,
+        &:hover,
+        &:focus {
+            z-index: 2;
+            color: @pagination-active-color;
+            background-color: @pagination-active-bg;
+            border-color: @pagination-active-border;
+            cursor: default;
+            text-shadow: @link-none-shadow;
+        }
+    }
+
 }
 
-// Sizing
+// 大小
 // --------------------------------------------------
 
-// Large
+// 大
 .pagination-lg {
-  .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @border-radius-large);
+    .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @border-radius-large);
 }
 
-// Small
+// 小
 .pagination-sm {
-  .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @border-radius-small);
+    .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @border-radius-small);
 }
+
+
+
+.pager {
+    list-style: none;
+    text-align: center;
+    &:extend(.clearfix all);
+    > li {
+        > a,
+        > span {
+            display: inline-block;
+            padding: 5px 14px;
+        }
+
+        > a:hover,
+        > a:focus {
+            text-decoration: none;
+        }
+    }
+
+    .next {
+        > a,
+        > span {
+            float: right;
+        }
+    }
+
+    .previous {
+        > a,
+        > span {
+            float: left;
+        }
+    }
+
+}
+
