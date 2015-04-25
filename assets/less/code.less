@@ -16,9 +16,10 @@ samp {
 code {
   padding: 0px 5px;
   font-size: @font-size-smaller;
-  color: @code-color;
-  background-color: @code-bg;
- 
+
+     .text-variant(@code-color);
+     .bg-variant(@code-bg);
+     
     border-left: 5px solid #dcdcdc;
     border-right: 5px solid #dcdcdc;
 
@@ -37,8 +38,8 @@ code {
 kbd {
   padding: 2px 4px;
   font-size: @font-size-smaller;
-  color: @kbd-color;
-  background-color: @kbd-bg;
+  .text-variant(@kbd-color);
+  .bg-variant(@kbd-bg);
   border-radius: @border-radius-small;
   box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
 
@@ -59,13 +60,14 @@ pre {
   line-height: @line-height-base;
   word-break: break-all;
   word-wrap: break-word;
-  color: @pre-color;
-  background-color: @pre-bg;
   border-radius: @border-radius-base;
   border-left: 5px ridge #c3c3c3;
     
   box-shadow: 0px 0 15px #c3c3c3;
 
+  .text-variant(@pre-color);
+  .bg-variant(@pre-bg);
+  
   // Account for some code outputs that place code tags in pre tags
   code {
     padding: 0;
@@ -75,11 +77,11 @@ pre {
     background-color: transparent;
     border-radius: 0;
 	
-	border: none;
+    border: none;
 	
-	&:hover {
-	   border: none;
-	}
+    &:hover {
+	border: none;
+    }
   }
 }
 

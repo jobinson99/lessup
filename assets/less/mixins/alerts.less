@@ -1,10 +1,11 @@
 // Alerts
 
 .alert-variant(@background; @border; @text-color) {
-  background-color: @background;
   border-color: @border;
-  color: @text-color;
 
+  .text-variant(@text-color);
+  .bg-variant(@background);
+  
   hr {
     border-top-color: @gray-lighter;
   }
