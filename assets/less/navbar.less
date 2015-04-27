@@ -3,6 +3,34 @@
 // --------------------------------------------------
 
 
+// 清除导航区的连接样式
+
+nav,
+.nav,
+.navbar {
+    > li a,
+    > dd a,
+    > dt a {
+        &,
+        &:hover,
+        &:focus,
+        &:visited  {
+            text-shadow: @link-none-shadow;
+        }
+
+    }
+}
+
+.nav-brand {
+    &,
+    &:hover,
+    &:focus,
+    &:visited  {
+        text-shadow: @link-none-shadow;
+    }
+}
+
+
 // Wrapper and base class
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
@@ -169,13 +197,6 @@
   border-left: 15px double @brand-primary;
   border-right: 5px double @brand-primary;
   color: @gray-darker;
-  
-  &,
-  &:hover,
-  &:focus,
-  &:visited  {
-    text-shadow: @link-none-shadow;
-  }
   
   &:hover,
   &:focus {
