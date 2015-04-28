@@ -7,7 +7,9 @@
 
 nav,
 .nav,
+.nav-tabs,
 .navbar {
+    padding-left:0;
     > li a,
     > dd a,
     > dt a {
@@ -21,7 +23,7 @@ nav,
     }
 }
 
-.nav-brand {
+.navbar-brand {
     &,
     &:hover,
     &:focus,
@@ -554,7 +556,7 @@ nav,
   }
 }
 
-// Inverse navbar
+// Inverse navbar ·´Ïà
 
 .navbar-inverse {
   background-color: @navbar-inverse-bg;
@@ -575,7 +577,8 @@ nav,
 
   .navbar-nav {
     > li > a {
-      color: @navbar-inverse-link-color;
+        color: @navbar-inverse-link-color;
+        background-color: transparent;
 
       &:hover,
       &:focus {
