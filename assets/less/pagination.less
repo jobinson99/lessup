@@ -28,15 +28,15 @@
         }
 
         &:first-child {
-            > a,
-            > span {
-                .border-left-radius(@border-radius-base);
+            > a:before,
+            > span:before {
+                .triangle(left, 50px, black, side);
             }
         }
         &:last-child {
-            > a,
-            > span {
-                .border-right-radius(@border-radius-base);
+            > a:after,
+            > span:after {
+                .triangle(right, @triangle-base, @pagination-bg, side);
             }
         }
         
@@ -60,7 +60,6 @@
 
 .pagination {
     display: inline-block;
-    border-radius: @border-radius-base;
 
     > li {
         > a,
@@ -114,12 +113,12 @@
 
 // 大
 .pagination-lg {
-    .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @border-radius-large);
+    .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @triangle-lg);
 }
 
 // 小
 .pagination-sm {
-    .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @border-radius-small);
+    .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @triangle-sm);
 }
 
 

@@ -3,6 +3,15 @@
 // --------------------------------------------------
 
 
+//==  浏览器支持
+
+@support-html5: true;
+@support-ie-version: 7;
+@support-old-ie: ~`@{support-ie-version} < 8`; // [deprecated] use `@support-ie-version` instead
+@use-autoprefixer: true;
+
+
+
 //== 颜色
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -19,6 +28,9 @@
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
+
+// 调色盘
+// khaki
 
 
 //== 几种常见意义 前景背景需要颜色搭配，图标添加，悬停效果：关联 按钮（带图标），段落，文内，表格等。
@@ -123,7 +135,7 @@
 //** Background color for `<body>`.
 @body-bg:               #F5F4E0;
 //** Global text color on `<body>`.
-@text-color:            @gray-darker;
+@text-color:            @gray-darker; //#666
 
 //** Global textual link color.
 @link-color:           @gray-dark;
@@ -210,6 +222,8 @@
 @border-radius-base:        4px;
 @border-radius-large:       6px;
 @border-radius-small:       3px;
+@border-radius-pager: 40px;
+
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -303,7 +317,7 @@
 @input-border-focus:             #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder:        @gray-light;
+@input-color-placeholder:        @gray-light; //#999
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -853,18 +867,19 @@
 //##
 
 @badge-color:                 #fff;
+@badge-bg:                    green;
 //** Linked badge text color on hover
-@badge-link-hover-color:      #fff;
-@badge-bg:                    @gray-light;
+@badge-link-hover-color:      gold;
+@badge-link-hover-bg:      brown;
+
 
 //** Badge text color in active nav link
-@badge-active-color:          @link-color;
+@badge-active-color:          gold;
 //** Badge background color in active nav link
-@badge-active-bg:             #fff;
+@badge-active-bg:             darkblue;
 
-@badge-font-weight:           bold;
 @badge-line-height:           1;
-@badge-border-radius:         10px;
+//@badge-border-radius:         10px;
 
 
 //== Breadcrumbs  页面路径
@@ -946,6 +961,37 @@
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
+
+
+//== 形状
+//
+//##
+
+//** 大中小三角
+
+@triangle-xl: 40px;
+@triangle-lg: 20px;
+@triangle-base: 15px;
+@triangle-sm: 10px;
+@triangle-xs: 5px;
+
+//** 大中小圆
+
+@circle-xl: 40px;
+@circle-lg:20px;
+@circle-base:15px;
+@circle-sm:10px;
+@circle-xs: 5px;
+
+//** 分页箭头大小
+@pager-triangle-base: @triangle-base;
+
+
+//** 带含义箭头
+
+@shape-size: @triangle-base;
+
+
 
 
 

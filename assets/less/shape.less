@@ -8,37 +8,7 @@
 .shape-done,
 .shape-present {
     margin-right: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.shape-primary,
-.shape-primary:after{
-    background-color:@mark-primary-bg;
-}
-
-.shape-success,
-.shape-success:after{
-    background-color: @mark-success-bg;
-}
-.shape-fail,
-.shape-fail:after {
-    background-color: @mark-fail-bg;
-}
-
-.shape-todo,
-.shape-todo:after {
-    background-color: @mark-good-bg;
-}
-
-.shape-done,
-.shape-done:after {
-    background-color: @mark-done-bg;
-}
-
-.shape-present,
-.shape-present:after {
-    background-color: @mark-info-bg;
+    padding: 4px 10px;
 }
 
 .shape-primary:after,
@@ -47,13 +17,31 @@
 .shape-done:after,
 .shape-fail:after,
 .shape-present:after {
-    border-bottom: 12px solid @body-bg;
-    border-top: 12px solid @body-bg;
-    border-left: 10px solid transparent;
-    height: 0;
-    width: 0;
     content: "";
-    position: absolute;
+	margin-left: 10px;
+}
+
+.shape-primary{
+    .context-shape(@mark-primary-bg, @shape-size);
+}
+
+.shape-success {
+    .context-shape(@mark-success-bg, @shape-size);
+}
+.shape-fail {
+    .context-shape(@mark-fail-bg, @shape-size);
+}
+
+.shape-todo {
+    .context-shape(@mark-good-bg, @shape-size);
+}
+
+.shape-done {
+    .context-shape(@mark-done-bg, @shape-size);
+}
+
+.shape-present {
+        .context-shape(@mark-info-bg, @shape-size);
 }
 
 
@@ -80,150 +68,5 @@
 }
 
 
-
-// Èý½Ç
-.triangle(@direction, @size, @color, @origin: corner) {
-    position: absolute;
-    .size(0);
-    @horizontal: ~`(function() { var match = '@{direction}'.match(/\b(?:right|left)\b/); return match ? match[0] : false; })()`;
-    @vertical: ~`(function() { var match = '@{direction}'.match(/\b(?:top|bottom)\b/); return match ? match[0] : false; })()`;
-
-    // diagonal
-    .output() when not (@horizontal = false) and not (@vertical = false) {
-        border: @size / 2 solid @color;
-
-        .border(top) {
-            border-bottom-color: transparent;
-        }
-        .border(bottom) {
-            border-top-color: transparent;
-        }
-        .border(right) {
-            border-left-color: transparent;
-        }
-        .border(left) {
-            border-right-color: transparent;
-        }
-        .border(top) when (@support-ie-version < 7) {
-            _border-bottom-style: dashed;
-        }
-        .border(bottom) when (@support-ie-version < 7) {
-            _border-top-style: dashed;
-        }
-        .border(right) when (@support-ie-version < 7) {
-            _border-left-style: dashed;
-        }
-        .border(left) when (@support-ie-version < 7) {
-            _border-right-style: dashed;
-        }
-        .border(@vertical);
-        .border(@horizontal);
-
-        .margin(corner) when (@vertical = bottom) {
-            margin-top: -@size;
-        }
-        .margin(corner) when (@horizontal = right) {
-            margin-left: -@size;
-        }
-        .margin(side) {
-            margin-top: -@size / 2;
-        }
-        .margin(side) {
-            margin-left: -@size / 2;
-        }
-        .margin(@origin);
-    }
-
-    // horizontal or vertical
-    .output() when (@horizontal = false), (@vertical = false) {
-        @border-width: @size / sqrt(2);
-        border: @border-width solid transparent;
-
-        .border-style() when (@support-ie-version < 7) {
-            _border-style: dashed;
-        }
-        .border-style();
-
-        .border(top) {
-            border-bottom-color: @color;
-        }
-        .border(right) {
-            border-left-color: @color;
-        }
-        .border(bottom) {
-            border-top-color: @color;
-        }
-        .border(left) {
-            border-right-color: @color;
-        }
-        .border(top) when (@support-ie-version < 7) {
-            _border-bottom-style: solid;
-        }
-        .border(right) when (@support-ie-version < 7) {
-            _border-left-style: solid;
-        }
-        .border(bottom) when (@support-ie-version < 7) {
-            _border-top-style: solid;
-        }
-        .border(left) when (@support-ie-version < 7) {
-            _border-right-style: solid;
-        }
-        .border(@direction);
-
-        .margin(corner) {
-            margin-left: -@border-width;
-        }
-        .margin(corner) {
-            margin-top: -@border-width;
-        }
-        .margin(side) when not (@vertical = false) {
-            margin-left: -@border-width;
-        }
-        .margin(side) when (@horizontal = left) {
-            margin-left: -@border-width * 2;
-        }
-        .margin(side) when not (@horizontal = false) {
-            margin-top: -@border-width;
-        }
-        .margin(side) when (@vertical = top) {
-            margin-top: -@border-width * 2;
-        }
-        .margin(@origin);
-    }
-
-    .output() when (@support-ie-version < 7) {
-        _font-size: 0;
-        _line-height: 0;
-    }
-
-    .output();
-}
-
-// Ô²
-.circle(@size, @bg: false) {
-    .output() when (ispixel(@size)) {
-        .size(@size);
-        // for better compatibility
-        .border-radius(ceil(@size / 2));
-    }
-    .output() when (ispercentage(@size)) {
-        width: @size;
-        padding-top: @size;
-        .border-radius(50%);
-    }
-    .output() when (@size = 0) {
-        .size(0);
-    }
-
-    // minimize affected properties
-    .output() when (iscolor(@bg)) {
-        background-color: @bg;
-    }
-    .output() when not (@bg = false) and not (iscolor(@bg)) {
-        background: @bg;
-    }
-
-    .output();
-}
 
 

@@ -1,6 +1,6 @@
-// Pagination分页
+// Pagination分页大小设定
 
-.pagination-size(@padding-vertical; @padding-horizontal; @font-size; @border-radius) {
+.pagination-size(@padding-vertical; @padding-horizontal; @font-size; @triangle-size) {
   > li {
     > a,
     > span {
@@ -8,16 +8,17 @@
       font-size: @font-size;
     }
     &:first-child {
-      > a,
-      > span {
-        .border-left-radius(@border-radius);
+      > a:before,
+      > span:before {
+        .triangle(left,  @triangle-size, @pagination-bg,side);
       }
     }
     &:last-child {
-      > a,
-      > span {
-        .border-right-radius(@border-radius);
+      > a:after,
+      > span:after {
+        .triangle(right, @triangle-size, @pagination-bg, side);
       }
     }
   }
 }
+

@@ -82,7 +82,6 @@
   </div>
 </header>
 
-
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content" tabindex="-1">
       <div class="container">
@@ -96,8 +95,7 @@
     <div class="container-fluid">
 
       <div class="row">
-        <div class="col-md-9" role="main">
-
+        <div class="col-md-6" role="main">
 
 <div class="bs-docs-section">
   <h1 id="breadcrumbs" class="page-header">页面路径 Breadcrumbs</h1>
@@ -310,73 +308,6 @@
 
 
 <div class="bs-docs-section">
-  <h1 id="helper-classes" class="page-header">辅助  classes</h1>
-
-
-  <h3 id="helper-classes-close">关闭 Close icon</h3>
-  <p>Use the generic close icon for dismissing content like modals and alerts.</p>
-  <div class="bs-example" data-example-id="close-icon">
-    <p><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>
-  </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;/button&gt;</span></code></pre></div>
-
-
-  <h3 id="helper-classes-carets">箭头 Carets</h3>
-  <p>Use carets to indicate dropdown functionality and direction. Note that the default caret will reverse automatically in <a href="../components/#btn-dropdowns-dropup">dropup menus</a>.</p>
-  <div class="bs-example" data-example-id="caret">
-    <span class="caret"></span>
-  </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></div>
-
-
-
-        </div>
-
-
-<div class="bs-docs-section">
-  <h1 id="badges" class="page-header">附加数字 Badges</h1>
-
-  <p class="lead">Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p>
-
-  <div class="bs-example" data-example-id="simple-badges">
-    <a href="#">Inbox <span class="badge">42</span></a>
-    <br><br>
-    <button class="btn btn-primary" type="button">
-      Messages <span class="badge">4</span>
-    </button>
-  </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Inbox <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
-
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
-  Messages <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/button&gt;</span></code></pre></div>
-
-  <h4>Self collapsing</h4>
-  <p>When there are no new or unread items, badges will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.</p>
-
-  <div class="bs-callout bs-callout-danger" id="callout-badges-ie8-empty">
-    <h4>Cross-browser compatibility</h4>
-    <p>Badges won't self collapse in Internet Explorer 8 because it lacks support for the <code>:empty</code> selector.</p>
-  </div>
-
-  <h4>Adapts to active nav states</h4>
-  <p>Built-in styles are included for placing badges in active states in pill navigations.</p>
-  <div class="bs-example" data-example-id="badges-in-pills">
-    <ul class="nav nav-pills" role="tablist">
-      <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
-      <li role="presentation"><a href="#">Profile</a></li>
-      <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
-    </ul>
-  </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Messages <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
-</div>
-
-
-<div class="bs-docs-section">
 		  
   <h1 id="glyphicons" class="page-header">图标</h1>
 
@@ -456,6 +387,10 @@
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 </div>
+
+</div></div>
+
+<div class="col-md-6" role="main">
 
 <div class="bs-docs-section">
   <h1 id="progress" class="page-header">进度条 </h1>
@@ -666,6 +601,8 @@
 <span class="shape-done">已成</span>
 <span class="shape-fail">失败</span>
 </p>
+
+
 <p>
 <span class="bubble-normal">对话</span>
 </p>
@@ -673,11 +610,78 @@
 </div>
 
 <div class="bs-docs-section">
+  <h1 id="helper-classes" class="page-header">辅助  classes</h1>
+
+
+  <h3 id="helper-classes-close">关闭 Close icon</h3>
+  <p>Use the generic close icon for dismissing content like modals and alerts.</p>
+  <div class="bs-example" data-example-id="close-icon">
+    <p><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;/button&gt;</span></code></pre></div>
+
+
+  <h3 id="helper-classes-carets">箭头 Carets</h3>
+  <p>Use carets to indicate dropdown functionality and direction. Note that the default caret will reverse automatically in <a href="../components/#btn-dropdowns-dropup">dropup menus</a>.</p>
+  <div class="bs-example" data-example-id="caret">
+    <span class="caret"></span>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></div>
+
+
+
+        </div>
+
+
+<div class="bs-docs-section">
+  <h1 id="badges" class="page-header">附加数字 Badges</h1>
+
+  <p class="lead">Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p>
+
+  <div class="bs-example" data-example-id="simple-badges">
+    <a href="#">Inbox <span class="badge">42</span></a>
+    <br><br>
+    <button class="btn btn-primary" type="button">
+      Messages <span class="badge">4</span>
+    </button>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Inbox <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  Messages <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+  <h4>Self collapsing</h4>
+  <p>When there are no new or unread items, badges will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.</p>
+
+  <div class="bs-callout bs-callout-danger" id="callout-badges-ie8-empty">
+    <h4>Cross-browser compatibility</h4>
+    <p>Badges won't self collapse in Internet Explorer 8 because it lacks support for the <code>:empty</code> selector.</p>
+  </div>
+
+  <h4>Adapts to active nav states</h4>
+  <p>Built-in styles are included for placing badges in active states in pill navigations.</p>
+  <div class="bs-example" data-example-id="badges-in-pills">
+    <ul class="nav nav-pills" role="tablist">
+      <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+    </ul>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Messages <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+</div>
+
+
+<div class="bs-docs-section">
   <h1 id="other" class="page-header">其他扩展组件</h1>
   
 <h2 id="animate-css">基本动画 animate.css</h2>
 <h2 id="animate-css">基本绘画 holder.js</h2>
-<h2 id="baidu-echarts">统计图 基于 echart.js</h2>
+<h2 id="baidu-echarts">统计图 基于 echarts.js</h2>
 基于轻量级canvas类库zrendar。
 
 MVC核心封装实现图形仓库、视图渲染和交互控制：
@@ -696,221 +700,22 @@ MVC核心封装实现图形仓库、视图渲染和交互控制：
 使用canvas绘制各种动画。
 
   </div> 
-  
-        </div>
-        
-<div class="col-md-3" role="complementary">
-          <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
-            <ul class="nav bs-docs-sidenav">
-              
-                <li>
-  <a href="#glyphicons">Glyphicons</a>
-  <ul class="nav">
-    <li><a href="#glyphicons-glyphs">Available glyphs</a></li>
-    <li><a href="#glyphicons-how-to-use">How to use</a></li>
-    <li><a href="#glyphicons-examples">Examples</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#dropdowns">Dropdowns</a>
-  <ul class="nav">
-    <li><a href="#dropdowns-example">Example</a></li>
-    <li><a href="#dropdowns-alignment">Alignment</a></li>
-    <li><a href="#dropdowns-headers">Headers</a></li>
-    <li><a href="#dropdowns-divider">Divider</a></li>
-    <li><a href="#dropdowns-disabled">Disabled menu items</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#btn-groups">Button groups</a>
-  <ul class="nav">
-    <li><a href="#btn-groups-single">Basic example</a></li>
-    <li><a href="#btn-groups-toolbar">Button toolbar</a></li>
-    <li><a href="#btn-groups-sizing">Sizing</a></li>
-    <li><a href="#btn-groups-nested">Nesting</a></li>
-    <li><a href="#btn-groups-vertical">Vertical variation</a></li>
-    <li><a href="#btn-groups-justified">Justified button groups</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#btn-dropdowns">Button dropdowns</a>
-  <ul class="nav">
-    <li><a href="#btn-dropdowns-single">Single button dropdowns</a></li>
-    <li><a href="#btn-dropdowns-split">Split button dropdowns</a></li>
-    <li><a href="#btn-dropdowns-sizing">Sizing</a></li>
-    <li><a href="#btn-dropdowns-dropup">Dropup variation</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#input-groups">Input groups</a>
-  <ul class="nav">
-    <li><a href="#input-groups-basic">Basic example</a></li>
-    <li><a href="#input-groups-sizing">Sizing</a></li>
-    <li><a href="#input-groups-checkboxes-radios">Checkbox and radios addons</a></li>
-    <li><a href="#input-groups-buttons">Button addons</a></li>
-    <li><a href="#input-groups-buttons-dropdowns">Buttons with dropdowns</a></li>
-    <li><a href="#input-groups-buttons-segmented">Segmented buttons</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#nav">Navs</a>
-  <ul class="nav">
-    <li><a href="#nav-tabs">Tabs</a></li>
-    <li><a href="#nav-pills">Pills</a></li>
-    <li><a href="#nav-justified">Justified</a></li>
-    <li><a href="#nav-disabled-links">Disabled links</a></li>
-    <li><a href="#nav-dropdowns">Using dropdowns</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#navbar">Navbar</a>
-  <ul class="nav">
-    <li><a href="#navbar-default">Default navbar</a></li>
-    <li><a href="#navbar-brand-image">Brand image</a></li>
-    <li><a href="#navbar-forms">Forms</a></li>
-    <li><a href="#navbar-buttons">Buttons</a></li>
-    <li><a href="#navbar-text">Text</a></li>
-    <li><a href="#navbar-links">Non-nav links</a></li>
-    <li><a href="#navbar-component-alignment">Component alignment</a></li>
-    <li><a href="#navbar-fixed-top">Fixed to top</a></li>
-    <li><a href="#navbar-fixed-bottom">Fixed to bottom</a></li>
-    <li><a href="#navbar-static-top">Static top</a></li>
-    <li><a href="#navbar-inverted">Inverted navbar</a></li>
-  </ul>
-</li>
-<li><a href="#breadcrumbs">Breadcrumbs</a></li>
-<li>
-  <a href="#pagination">Pagination</a>
-  <ul class="nav">
-    <li><a href="#pagination-default">Default pagination</a></li>
-    <li><a href="#pagination-pager">Pager</a></li>
-  </ul>
-</li>
-<li><a href="#labels">Labels</a></li>
-<li><a href="#badges">Badges</a></li>
-<li><a href="#jumbotron">Jumbotron</a></li>
-<li><a href="#page-header">Page header</a></li>
-<li>
-  <a href="#thumbnails">Thumbnails</a>
-  <ul class="nav">
-    <li><a href="#thumbnails-default">Default example</a></li>
-    <li><a href="#thumbnails-custom-content">Custom content</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#alerts">Alerts</a>
-  <ul class="nav">
-    <li><a href="#alerts-examples">Examples</a></li>
-    <li><a href="#alerts-dismissible">Dismissible alerts</a></li>
-    <li><a href="#alerts-links">Links in alerts</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#progress">Progress bars</a>
-  <ul class="nav">
-    <li><a href="#progress-basic">Basic example</a></li>
-    <li><a href="#progress-label">With label</a></li>
-    <li><a href="#progress-alternatives">Contextual alternatives</a></li>
-    <li><a href="#progress-striped">Striped</a></li>
-    <li><a href="#progress-animated">Animated</a></li>
-    <li><a href="#progress-stacked">Stacked</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#media">Media object</a>
-  <ul class="nav">
-    <li><a href="#media-default">Default media</a></li>
-    <li><a href="#media-list">Media list</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#list-group">List group</a>
-  <ul class="nav">
-    <li><a href="#list-group-basic">Basic example</a></li>
-    <li><a href="#list-group-badges">Badges</a></li>
-    <li><a href="#list-group-linked">Linked items</a></li>
-    <li><a href="#list-group-disabled">Disabled items</a></li>
-    <li><a href="#list-group-contextual-classes">Contextual classes</a></li>
-    <li><a href="#list-group-custom-content">Custom content</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#panels">Panels</a>
-  <ul class="nav">
-    <li><a href="#panels-basic">Basic example</a></li>
-    <li><a href="#panels-heading">Panel with heading</a></li>
-    <li><a href="#panels-alternatives">Contextual alternatives</a></li>
-    <li><a href="#panels-tables">With tables</a>
-    <li><a href="#panels-list-group">With list groups</a>
-  </ul>
-</li>
-<li><a href="#responsive-embed">Responsive embed</a></li>
-<li><a href="#wells">Wells</a></li>
-
-              
-            </ul>
-            <a class="back-to-top" href="#top">
-              Back to top
-            </a>
-            
-            <a href="#" class="bs-docs-theme-toggle" role="button">
-              Preview theme
-            </a>
-            
-          </nav>
-        </div>
-        
-      </div>
+ 
+       </div>
     </div>
 </div>
-</div>
-
+</div>	   
+	   
 
     <!-- Footer
 ================================================== -->
 <footer class="bs-docs-footer" role="contentinfo">
-  <div class="container">
-    <div class="bs-docs-social">
-  <ul class="bs-docs-social-buttons">
-    <li>
-      <iframe class="github-btn" src="#" width="100" height="20" title="Star on GitHub"></iframe>
-    </li>
-    <li>
-      <iframe class="github-btn" src="#" width="102" height="20" title="Fork on GitHub"></iframe>
-    </li>
-    <li class="follow-btn">
-      <a href="https://twitter.com/getbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @getbootstrap</a>
-    </li>
-    <li class="tweet-btn">
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getbootstrap.com/" data-count="horizontal" data-via="getbootstrap" data-related="mdo:Creator of Bootstrap">Tweet</a>
-    </li>
-  </ul>
-</div>
+ <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
 
-
-    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>.</p>
-    <p>Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-    <p>Code licensed under <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
-    <ul class="bs-docs-footer-links text-muted">
-      <li>Currently v3.3.4</li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
-      <li>&middot;</li>
-      <li><a href="../getting-started/#examples">Examples</a></li>
-      <li>&middot;</li>
-      <li><a href="../2.3.2/">v2.3.2 docs</a></li>
-      <li>&middot;</li>
-      <li><a href="../about/">About</a></li>
-      <li>&middot;</li>
-      <li><a href="http://expo.getbootstrap.com">Expo</a></li>
-      <li>&middot;</li>
-      <li><a href="http://blog.getbootstrap.com">Blog</a></li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
-    </ul>
-  </div>
+            <a class="back-to-top" href="#top">
+              Back to top
+            </a>
+          </nav>
 </footer>
 
 <!-- Bootstrap core JavaScript

@@ -1,5 +1,5 @@
 //
-// Badges 附加统计数字
+// Badges 附加统计数字：有三个地方应用：按钮，列表（包括菜单和普通列表），布局块（比如程序块），浮动块
 // --------------------------------------------------
 
 
@@ -7,16 +7,14 @@
 .badge {
   display: inline-block;
   min-width: 10px;
-  padding: 3px 7px;
+  padding: 3px 10px;
   font-size: @font-size-small;
-  font-weight: @badge-font-weight;
   color: @badge-color;
   line-height: @badge-line-height;
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
   background-color: @badge-bg;
-  border-radius: @badge-border-radius;
 
   // Empty badges collapse automatically (not available in IE8)
   &:empty {
@@ -39,7 +37,8 @@
   a& {
     &:hover,
     &:focus {
-      color: @badge-link-hover-color;
+        color: @badge-link-hover-color;
+        background-color: @badge-link-hover-bg;
       text-decoration: none;
       cursor: pointer;
     }
