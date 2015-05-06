@@ -1,0 +1,113 @@
+//
+// 颜色
+// -----------------------------------------------
+
+
+// 可用的几个函数 darken lighten
+
+// 灰度
+
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+// 常用
+
+@brand-primary:         lighten(#428bca, 6.5%); 
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+
+//// khaki
+
+
+// 带意义颜色设定
+//== 几种常见意义 前景背景需要颜色搭配，图标添加，悬停效果：关联 按钮（带图标），段落，文内，表格等。
+// 这里要设置反色，高亮色。
+
+@mark-default-text: @gray-dark; //默认
+@mark-default-bg: #fff;
+@mark-default-text-hover: #fff;
+@mark-default-bg-hover:blue;
+@mark-default-icon:;
+
+
+@mark-primary-text: white;// 基本
+@mark-primary-bg: @brand-primary;
+@mark-primary-text-hover: @gray-darker;
+@mark-primary-bg-hover: yellow;
+@mark-primary-icon:;
+
+@mark-ignore-text: @gray;// 可忽略
+@mark-ignore-bg: @gray-light;
+@mark-ignore-text-hover: @gray-light;
+@mark-ignore-bg-hover: @gray;
+@mark-ignore-icon:;
+
+@mark-info-text: @gray-darker;// 需要注意
+@mark-info-bg: #0F0;
+@mark-info-text-hover: white;
+@mark-info-bg-hover: blue;
+@mark-info-icon:;
+
+@mark-bad-text: @gray-darker;// 不好
+@mark-bad-bg:  @gray-light;
+@mark-bad-text-hover: white;
+@mark-bad-bg-hover: @gray-darker;
+@mark-bad-icon:;
+
+@mark-good-text: @gray-darker;// 好事
+@mark-good-bg:#FC9;
+@mark-good-text-hover: white;
+@mark-good-bg-hover: #A52A2A;
+@mark-goog-icon:;
+
+@mark-todo-text: white;// 待办
+@mark-todo-bg:@brand-primary;
+@mark-todo-text-hover: black;
+@mark-todo-bg-hover: @gray-lighter;
+@mark-todo-icon:;
+
+@mark-done-text: white;// 已完成
+@mark-done-bg: brown;
+@mark-done-text-hover:;
+@mark-done-bg-hover:;
+@mark-done-icon:;
+
+@mark-fail-text: white;// 任务失败
+@mark-fail-bg:@gray;
+@mark-fail-text-hover:;
+@mark-fail-bg-hover:;
+@mark-fail-icon:;
+
+@mark-success-text: @gray-dark;// 完成
+@mark-success-bg: yellow;
+@mark-success-text-hover: white;
+@mark-success-bg-hover: green;
+@mark-success-icon:;
+
+@mark-danger-text: red;// 危险
+@mark-danger-bg: brown;
+@mark-danger-text-hover: white;
+@mark-danger-bg-hover: red;
+@mark-danger-icon:;
+
+@mark-warning-text: black;// 警告
+@mark-warning-bg: red;
+@mark-warning-text-hover: white;
+@mark-warning-bg-hover: black;
+@mark-warning-icon:;
+
+
+
+
+
+
+
+
+
+

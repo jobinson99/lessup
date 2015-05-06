@@ -1,19 +1,14 @@
 //
-// icons 图标
+// 图标设定 Icons
 //
-// Since icons are fonts, they can be placed anywhere text is placed and are
-// thus automatically sized to match the surrounding child. To use, create an
-// inline element with the appropriate classes, like so:
-//
-// <a href="#"><i class="fa-star"><//i> Star</a>
+// 用法：在任意想加图标的地方，加入 <i class="fa-star"></i>
 
-// Import the fonts
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('@{icon-font-path}@{icon-font-name}.eot');
-  src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
-       url('@{icon-font-path}@{icon-font-name}.woff') format('woff'),
-       url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
-       url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg');
-}
+
+// 引入font-awesome
+
+@import "font-awesome/font-awesome.less";
+
+// 重置下符号字体路径。
+@fa-font-path: "../fonts/font-awesome/";
+
 
