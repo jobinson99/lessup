@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>按钮，列表，导航</title>
+<title>列表，导航</title>
 <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
 <script src="assets/js/less.js" type="text/javascript"></script>
 
@@ -71,7 +71,7 @@
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content" tabindex="-1">
       <div class="container">
-                <h1  class="page-header">按钮列表导航</h1>
+                <h1  class="page-header">列表导航</h1>
         <p>Learn about the project's history, meet the maintaining teams, and find out how to use the Bootstrap brand.</p>
         <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
 
@@ -84,7 +84,7 @@
         <div class="col-md-6" role="main">
  		
 <div class="bs-docs-section">
-  <h1 id="type-lists">列表 Lists</h1>
+  <h1 id="type-lists">默认的 列表 Lists</h1>
   
   <h3>无序 Unordered</h3>
   <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
@@ -205,17 +205,16 @@
 
   <h1 id="list-group" class="page-header">列表组 List group</h1>
 
-  <p class="lead">List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.</p>
+  <p class="lead">列表组可用于 复杂内容的列表</p>
 
-  <h2 id="list-group-basic">Basic example</h2>
-  <p>The most basic list group is simply an unordered list with list items, and the proper classes. Build upon it with the options that follow, or your own CSS as needed.</p>
+  <h2 id="list-group-basic">基本实例</h2>
+  <p>可用于定制各个列表项的样式</p>
   <div class="bs-example" data-example-id="simple-list-group">
     <ul class="list-group">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros</li>
+      <li class="list-group-item">第一个ul class="list-group"</li>
+      <li class="list-group-item">第二个li class="list-group-item"</li>
+      <li class="list-group-item">第三个</li>
+      <li class="list-group-item">第四个</li>
     </ul>
   </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
@@ -231,15 +230,15 @@
     <ul class="list-group">
       <li class="list-group-item">
         <span class="badge">14</span>
-        111111111111111111111111
+        ul class="list-group"
       </li>
       <li class="list-group-item">
         <span class="badge">2</span>
-        222222222222222222222222222222
+        li class="list-group-item"
       </li>
       <li class="list-group-item">
         <span class="badge">1</span>
-        3333333333333333333333333333
+        span class="badge"
       </li>
     </ul>
   </div>
@@ -251,16 +250,14 @@
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
   <h2 id="list-group-linked">链接子项 Linked items</h2>
-  <p>Linkify list group items by using anchor tags instead of list items (that also means a parent <code>&lt;div&gt;</code> instead of an <code>&lt;ul&gt;</code>). No need for individual parents around each element.</p>
+  <p>多个链接 的列表化显示：比如可用于 参考书目列表，注意此处不用<code>&lt;ul&gt;</code>，而是用 <code>&lt;div&gt;</code>。</p>
   <div class="bs-example" data-example-id="list-group-anchors">
     <div class="list-group">
       <a href="#" class="list-group-item active">
-        Cras justo odio
+        div class="list-group"
       </a>
-      <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-      <a href="#" class="list-group-item">Morbi leo risus</a>
-      <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-      <a href="#" class="list-group-item">Vestibulum at eros</a>
+      <a href="#" class="list-group-item">a href="#" class="list-group-item active"</a>
+      <a href="#" class="list-group-item">a href="#" class="list-group-item"</a>
     </div>
   </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
@@ -273,12 +270,12 @@
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-  <h2 id="list-group-disabled">Disabled items</h2>
+  <h2 id="list-group-disabled">不可用 子项Disabled items</h2>
   <p>Add <code>.disabled</code> to a <code>.list-group-item</code> to gray it out to appear disabled.</p>
   <div class="bs-example" data-example-id="list-group-disabled">
     <div class="list-group">
       <a href="#" class="list-group-item disabled">
-        Cras justo odio
+        这里不可用
       </a>
       <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
       <a href="#" class="list-group-item">Morbi leo risus</a>
@@ -296,24 +293,24 @@
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-  <h2 id="list-group-contextual-classes">Contextual classes</h2>
+  <h2 id="list-group-contextual-classes">意义化 Contextual classes</h2>
   <p>Use contextual classes to style list items, default or linked. Also includes <code>.active</code> state.</p>
   <div class="bs-example" data-example-id="list-group-variants">
     <div class="row">
       <div class="col-sm-6">
         <ul class="list-group">
-          <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
-          <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-          <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-          <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+          <li class="list-group-item list-group-item-success">li class="list-group-item list-group-item-success"</li>
+          <li class="list-group-item list-group-item-info">li class="list-group-item list-group-item-info"</li>
+          <li class="list-group-item list-group-item-warning">li class="list-group-item list-group-item-warning"</li>
+          <li class="list-group-item list-group-item-danger">li class="list-group-item list-group-item-danger"</li>
         </ul>
       </div>
       <div class="col-sm-6">
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
-          <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
-          <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
-          <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+          <a href="#" class="list-group-item list-group-item-success">a href="#" class="list-group-item list-group-item-success"</a>
+          <a href="#" class="list-group-item list-group-item-info">a href="#" class="list-group-item list-group-item-info"</a>
+          <a href="#" class="list-group-item list-group-item-warning">a href="#" class="list-group-item list-group-item-warning"</a>
+          <a href="#" class="list-group-item list-group-item-danger">a href="#" class="list-group-item list-group-item-danger"</a>
         </div>
       </div>
     </div>
@@ -331,21 +328,17 @@
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-danger"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-  <h2 id="list-group-custom-content">Custom content</h2>
+  <h2 id="list-group-custom-content">自定内容 Custom content</h2>
   <p>Add nearly any HTML within, even for linked list groups like the one below.</p>
   <div class="bs-example" data-example-id="list-group-custom-content">
     <div class="list-group">
       <a href="#" class="list-group-item active">
-        <h4 class="list-group-item-heading">List group item heading</h4>
-        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <h5 class="list-group-item-heading">组内 抬头 List group item heading</h5>
+        <p class="list-group-item-text">此处需要好好设定</p>
       </a>
       <a href="#" class="list-group-item">
-        <h4 class="list-group-item-heading">List group item heading</h4>
-        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-      </a>
-      <a href="#" class="list-group-item">
-        <h4 class="list-group-item-heading">List group item heading</h4>
-        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <h5 class="list-group-item-heading">组内 抬头 List group item heading</h5>
+        <p class="list-group-item-text">此处需要好好设定</p>
       </a>
     </div>
   </div>
