@@ -23,26 +23,7 @@
     <section>
 	
 <style>
-
-.example {
-  position: relative;
-  margin: 0;
-  padding-left: 1em;
-  padding-right: 1em;
-  line-height: 14px;
-  padding-top: 27px;
-  border-top: 1px;
-  padding-bottom: 13px;
-  border-bottom: 1px;
-  margin-bottom: 56px;
-  border: 1px solid #DDD;
-font-size: 48px;
-  line-height: 1;
-  background-color: #add8e6 !important;
-  font-weight: bold;
-
-}
-.example:after {
+.jumbotron:after {
   content: "示例";
   position: absolute;
   top: -1px;
@@ -75,7 +56,7 @@ font-size: 48px;
     .text-outset(lightblue);
 }
 &lt;/style&gt;</pre>
-    <div class="example">
+    <div class="jumbotron">
         <p class="span-outset">阳凸文本</p>
         <p class="span-white-outset">阴凸文本</p>
     </div>
@@ -94,7 +75,7 @@ font-size: 48px;
     .text-inset(lightblue);
 }
 &lt;/style&gt;</pre>
-    <div class="example">
+    <div class="jumbotron">
         <p class="span-inset">凹陷文本</p>
         <p class="span-white-inset">凹陷文本</p>
     </div>
@@ -109,7 +90,7 @@ font-size: 48px;
 }
 
 &lt;/style&gt;</pre>
-    <div class="example example-text-effects">
+    <div class="jumbotron">
         <p class="span-3d">3D文本</p>
     </div>
 
@@ -128,7 +109,7 @@ font-size: 48px;
     .text-shine(yellow);
 }
 &lt;/style&gt;</pre>
-    <div class="example" style="background-color:#147 !important;">
+    <div class="jumbotron" style="background-color:#147 !important;">
         <p class="span-shine-white">发光文本</p>
         <p class="span-shine-yellow">发光文本</p>
     </div>
@@ -143,15 +124,15 @@ font-size: 48px;
     .text-flog(#FFF);
 }
 &lt;/style&gt;</pre>
-    <div class="example">
+    <div class="jumbotron">
         <p class="span-flog">模糊文本</p>
     </div>
 
 </section>
 
  <section>
-<h1>文本内容h1>
-  <h3 id="helper-classes-colors">Contextual colors文本前景色 </h3>
+<h1>文本内容</h1>
+  <h3 id="helper-classes-colors">文本前景色 Contextual colors</h3>
   <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
   <div class="bs-example" data-example-id="contextual-colors-helpers">
   <p class="text-comment">p class="text-comment"</p>
@@ -209,66 +190,45 @@ font-size: 48px;
   <h1 id="type" class="page-header">常用 Typography</h1>
 
   <!-- Headings -->
-  <h2 id="type-headings">Headings</h2>
+  <h2 id="type-headings">标题 Headings</h2>
   <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
   <div class="bs-example bs-example-type" data-example-id="simple-headings">
-    <table class="table">
-      <tbody>
-        <tr>
-          <td><h1>h1. Bootstrap heading</h1></td>
-          <td class="type-info">Semibold 36px</td>
-        </tr>
-        <tr>
-          <td><h2>h2. Bootstrap heading</h2></td>
-          <td class="type-info">Semibold 30px</td>
-        </tr>
-        <tr>
-          <td><h3>h3. Bootstrap heading</h3></td>
-          <td class="type-info">Semibold 24px</td>
-        </tr>
-        <tr>
-          <td><h4>h4. Bootstrap heading</h4></td>
-          <td class="type-info">Semibold 18px</td>
-        </tr>
-        <tr>
-          <td><h5>h5. Bootstrap heading</h5></td>
-          <td class="type-info">Semibold 14px</td>
-        </tr>
-        <tr>
-          <td><h6>h6. Bootstrap heading</h6></td>
-          <td class="type-info">Semibold 12px</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Bootstrap heading<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>h2. Bootstrap heading<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>h3. Bootstrap heading<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>h4. Bootstrap heading<span class="nt">&lt;/h4&gt;</span>
-<span class="nt">&lt;h5&gt;</span>h5. Bootstrap heading<span class="nt">&lt;/h5&gt;</span>
-<span class="nt">&lt;h6&gt;</span>h6. Bootstrap heading<span class="nt">&lt;/h6&gt;</span></code></pre></div>
+  <div class="jumbotron">
+<h1>h1. heading<small>Semibold 36px</small></h1>
+<h2>h2. heading<small>Semibold 30px</small></h2>
+<h3>h3. heading<small>Semibold 24px</small></h3>
+<h4>h4. heading<small>Semibold 18px</small></h4>
+<h5>h5. heading<small>Semibold 14px</small></h5>
+<h6>h6. heading<small>Semibold 12px</small></h6>
+  </div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. heading<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. heading<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. heading<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. heading<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. heading<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. heading<span class="nt">&lt;/h6&gt;</span></code></pre></div>
 
   <p>大标题带小字 用 <code>&lt;small&gt;</code> 或者加类 <code>.small</code> class.</p>
   <div class="bs-example bs-example-type" data-example-id="small-headings">
     <table class="table">
       <tbody>
         <tr>
-          <td><h1>h1. Bootstrap heading <small>Secondary text</small></h1></td>
+          <td><h1>h1.  heading <small>Secondary text</small></h1></td>
         </tr>
         <tr>
-          <td><h2>h2. Bootstrap heading <small>Secondary text</small></h2></td>
+          <td><h2>h2. heading <small>Secondary text</small></h2></td>
         </tr>
         <tr>
-          <td><h3>h3. Bootstrap heading <small>Secondary text</small></h3></td>
+          <td><h3>h3.  heading <small>Secondary text</small></h3></td>
         </tr>
         <tr>
-          <td><h4>h4. Bootstrap heading <small>Secondary text</small></h4></td>
+          <td><h4>h4. heading <small>Secondary text</small></h4></td>
         </tr>
         <tr>
-          <td><h5>h5. Bootstrap heading <small>Secondary text</small></h5></td>
+          <td><h5>h5. heading <small>Secondary text</small></h5></td>
         </tr>
         <tr>
-          <td><h6>h6. Bootstrap heading <small>Secondary text</small></h6></td>
+          <td><h6>h6. heading <small>Secondary text</small></h6></td>
         </tr>
       </tbody>
     </table>
@@ -1191,7 +1151,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 </div>
 
 <div class="bs-docs-section">
-  <h1 id="thumbnails" class="page-header">缩略图区 Thumbnails</h1>
+  <h1 id="thumbnails" class="page-header">简介区 Thumbnails</h1>
 
   <p class="lead">Extend Bootstrap's <a href="../css/#grid">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
   <p>需要像 Pinterest那样的，可能需要插件 ： <a href="http://masonry.desandro.com">Masonry</a>, <a href="http://isotope.metafizzy.co">Isotope</a>, 或 <a href="http://salvattore.com">Salvattore</a>.</p>

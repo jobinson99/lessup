@@ -353,15 +353,15 @@
 <div class="bs-docs-section">
   <h1 id="nav" class="page-header">导航 Navs</h1>
 
-  <p class="lead">Navs available in Bootstrap have shared markup, starting with the base <code>.nav</code> class, as well as shared states. Swap modifier classes to switch between each style.</p>
+  <p class="lead">导航有共同的类 <code>.nav</code> as well as shared states. Swap modifier classes to switch between each style.</p>
 
   <div class="bs-callout bs-callout-info" id="callout-navs-tabs-plugin">
-    <h4>Using navs for tab panels requires JavaScript tabs plugin</h4>
+    <h4>注意：在标签页中导航需要js tabs插件</h4>
     <p>For tabs with tabbable areas, you must use the <a href="../javascript/#tabs">tabs JavaScript plugin</a>. The markup will also require additional <code>role</code> and ARIA attributes – see the plugin's <a href="../javascript/#tabs-usage">example markup</a> for further details.</p>
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-navs-accessibility">
-    <h4>Make navs used as navigation accessible</h4>
+    <h4>注意：Make navs used as navigation accessible</h4>
     <p>If you are using navs to provide a navigation bar, be sure to add a <code>role="navigation"</code> to the most logical parent container of the <code>&lt;ul&gt;</code>, or wrap a <code>&lt;nav&gt;</code> element around the whole navigation. Do not add the role to the <code>&lt;ul&gt;</code> itself, as this would prevent it from being announced as an actual list by assistive technologies.</p>
   </div>
 
@@ -410,8 +410,8 @@
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
 
-  <h2 id="nav-justified">Justified</h2>
-  <p>Easily make tabs or pills equal widths of their parent at screens wider than 768px with <code>.nav-justified</code>. On smaller screens, the nav links are stacked.</p>
+  <h2 id="nav-justified">大小平均 Justified</h2>
+  <p>大于屏幕宽度 768px，可加<code>.nav-justified</code>实现大小平均。On smaller screens, the nav links are stacked.</p>
   <p><strong class="text-danger">Justified navbar nav links are currently not supported.</strong></p>
   <div class="bs-callout bs-callout-warning" id="callout-navs-justified-safari">
     <h4>Safari and responsive justified navs</h4>
@@ -438,12 +438,11 @@
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
 
-  <h2 id="nav-disabled-links">Disabled links</h2>
+  <h2 id="nav-disabled-links">不可用 Disabled links</h2>
   <p>For any nav component (tabs or pills), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-navs-anchor-disabled">
-    <h4>Link functionality not impacted</h4>
-    <p>This class will only change the <code>&lt;a&gt;</code>'s appearance, not its functionality. Use custom JavaScript to disable links here.</p>
+    <p class="bg-warning">注意：用css仅仅是改变<code>&lt;a&gt;</code>样式，要实现功能，需要js配合。</p>
   </div>
 
   <div class="bs-example" data-example-id="disabled-nav-link">
@@ -832,19 +831,19 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"><i class="fa fa-glass">1</i></span>
-            <span class="icon-bar"><i class="fa fa-heart">1</i>2</span>
-            <span class="icon-bar"><i class="fa fa-home">1</i>3</span>
+            <span class="sr-only">开关导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">标识1固顶</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">1Home</a></li>
-            <li><a href="#">2Link</a></li>
-            <li><a href="#">3Link</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3L</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -857,12 +856,11 @@
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
 
   <div class="bs-callout bs-callout-danger" id="callout-navbar-fixed-top-padding">
-    <h4>Body padding required</h4>
-    <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the top of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
+    <p class="bg-warning">注意：导航条会遮罩掉其下面的元素，因此，如果内容顶部可能需要设定下边距。导航条默认高度50px</p>
+	
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span> <span class="m">70px</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
     <p>Make sure to include this <strong>after</strong> the core Bootstrap CSS.</p>
   </div>
-
 
   <h2 id="navbar-fixed-bottom">固底 Fixed to bottom</h2>
   <p>Add <code>.navbar-fixed-bottom</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
@@ -872,12 +870,12 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-7">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">开关底部</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">固底 Brand</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-7">
@@ -897,28 +895,28 @@
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
 
   <div class="bs-callout bs-callout-danger" id="callout-navbar-fixed-bottom-padding">
-    <h4>Body padding required</h4>
-    <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the bottom of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
+    <p class="bg-warning">注意：导航条会遮罩掉其下面的元素，因此，如果内容底部可能需要设定下边距。导航条默认高度50px</p>
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">70px</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
-    <p>Make sure to include this <strong>after</strong> the core Bootstrap CSS.</p>
+    <p>Make sure to include this <strong>after</strong> the core CSS.</p>
   </div>
 
 
   <h2 id="navbar-static-top"> 静态 顶 Static top</h2>
   <p>Create a full-width navbar that scrolls away with the page by adding <code>.navbar-static-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
-  <p>Unlike the <code>.navbar-fixed-*</code> classes, you do not need to change any padding on the <code>body</code>.</p>
+  <p class="bg-info">此处无需像<code>.navbar-fixed-*</code> 改变边距。</p>
   <div class="bs-example bs-navbar-top-example" data-example-id="navbar-static-top">
+  
     <nav class="navbar navbar-default navbar-static-top">
       <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8">
-            <span class="sr-only">开关Toggle navigation</span>
+            <span class="sr-only">开关</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand标识</a>
+          <a class="navbar-brand" href="#">静态顶</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
