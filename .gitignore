@@ -1,11 +1,11 @@
 .directory
 
-cankao
+参考1
+.projectile
 
 # Ignore docs files
 _gh_pages
 _site
-.ruby-version
 
 # Numerous always-ignore extensions
 *.diff
@@ -33,9 +33,6 @@ _site
 nbproject
 Thumbs.db
 
-# Komodo
-.komodotools
-*.komodoproject
 
 # Folders to ignore
 bower_components

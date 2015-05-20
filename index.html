@@ -1,234 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
   <head>
-    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
-<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lessup 一起来 - 开源跨屏框架</title>
 
-<title>
-  
-    Bootstrap &middot; The world's most popular mobile-first and responsive front-end framework.
-  
-</title>
+    <link href="docs/assets/css/zui.min.css" rel="stylesheet">
+    <link href="docs/assets/css/doc.min.css" rel="stylesheet">
 
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
-<script src="assets/js/less.js" type="text/javascript"></script>
-<!-- Documentation extras -->
+    <link rel="shortcut icon" href="docs/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="docs/favicon.ico" type="image/x-icon">
 
-
-<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="../assets/js/ie-emulation-modes-warning.js"></script>
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<!-- Favicons -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/favicon.ico">
-
+    <!--[if lt IE 9]>
+      <script src="dist/lib/ieonly/html5shiv.js"></script>
+      <script src="dist/lib/ieonly/respond.js"></script>
+      <script src="dist/lib/ieonly/excanvas.js"></script>
+    <![endif]-->
   </head>
-  <body class="bs-docs-home">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
-
-    <!-- Docs master nav -->
-    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="../" class="navbar-brand">Bootstrap</a>
-    </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="gettingstart/">关于项目结构</a>
-        </li>
-        <li>
-          <a href=" layout/">布局</a>
-        </li>
-        <li>
-          <a href="components/">组件</a>
-        </li>
-        <li>
-          <a href="javascript/">需要JavaScript</a>
-        </li>
-        <li>
-          <a href="customize/">定制</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-        <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-    <!-- Page content of course! -->
-    <main class="bs-docs-masthead" id="content" role="main" tabindex="-1">
-  <div class="container">
-    <span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">B</span>
-    <p class="lead">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
-    <p class="lead">
-      <a href="getting-started#download" class="btn btn-outline-inverse btn-lg" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 3.3.4');">Download Bootstrap</a>
-    </p>
-    <p class="version">Currently v3.3.4</p>
-    <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
-
-  </div>
-</main>
-
-<div class="bs-docs-featurette">
-  <div class="container">
-    <h2 class="bs-docs-featurette-title">Designed for everyone, everywhere.</h2>
-    <p class="lead">Bootstrap makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.</p>
-
-    <hr class="half-rule">
-
-    <div class="row">
-      <div class="col-sm-4">
-        <img src="assets/img/sass-less.png" alt="Sass and Less support" class="img-responsive">
-        <h3>Preprocessors</h3>
-        <p>Bootstrap ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, <a href="../css/#less">Less</a> and <a href="../css/#sass">Sass</a>. Quickly get started with precompiled CSS or build on the source.</p>
+  <body>
+    <header id="header">
+      <div class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".zui-navbar-collapse">
+              <span class="sr-only">切换导航</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand"><span class="path-zui-36"><i class="path-1"></i><i class="path-2"></i></span> <span class="brand-title">ZUI</span> &nbsp;<small class="zui-version"></small> <i data-toggle="tooltip" id="compactTogger" data-placement="bottom" class="icon icon-home"></i></a>
+          </div>
+          <nav class="collapse navbar-collapse zui-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li id="navDownloadLink"><a title="立即下载" href="docs/download/zui-1.3.1-dist.zip" target="_blank"><i class="icon icon-download-alt"></i><span> 立即下载</span></a></li>
+              <li><a title="论坛" href="http://forum.zui.sexy/forum/" target="_blank"><i class="icon icon-comments-alt"></i><span> 论坛</span></a></li>
+              <li><a title="在Github上Star项目" href="https://github.com/easysoft/zui" target="_blank"><i class="icon icon-github"></i><span> Star</span></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <img src="assets/img/devices.png" alt="Responsive across devices" class="img-responsive">
-        <h3>One framework, every device.</h3>
-        <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
+      <div id="headContainer">
+        <div class="container">
+          <div id="heading">
+            <h1>ZUI</h1>
+            <p>一个开源前端实践方案，帮助你快速构现代跨屏应用。</p>
+            <div id="download">
+              <a href="docs/download/zui-1.3.1-dist.zip" class="btn btn-primary btn-lg">立即下载 <i class="icon icon-download-alt"></i></a>
+              <p><small>最新版本 <span class="zui-version"><i class='icon icon-spin icon-spinner-indicator'></i></span> &nbsp; <a style="color: #f1f1f1" href="https://github.com/easysoft/zui/archive/master.zip" target="_blank">下载源码</a></small></p>
+            </div>
+            <p>QQ群：384135104 &nbsp; <a href="http://forum.zui.sexy/forum/" style="color: #f1f1f1" target="_blank"><i class="icon icon-comments-alt"></i> 论坛</a></p>
+          </div>
+          <div id="search">
+            <div id="searchForm">
+              <input type="text" class="form-control input-lg" id="searchInput" placeholder="按钮, control, icon-star..."/>
+              <i class="icon icon-search"></i>
+              <button id="searchHelpBtn" type="button" class="btn btn-link"><i class="icon icon-question"></i></button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <img src="assets/img/components.png" alt="Components" class="img-responsive">
-        <h3>Full of features</h3>
-        <p>With Bootstrap, you get extensive and beautiful documentation for common HTML elements, dozens of custom HTML and CSS components, and awesome jQuery plugins.</p>
+    </header>
+
+    <div id="page">
+      <div id="pageHeader">
+        <div class="wrapper container">
+          <i class="icon icon-star"></i>
+          <h2><a class="name" href="###">图标</a></h2>
+          <button type="button" class="btn btn-link" id="pageTogger" title="折叠/展开 章节" data-toggle="tooltip"></button>
+          <button data-toggle="tooltip" title="关闭（ESC）" type="button" class="btn btn-link path-close-btn path-btn" id="pageCloseBtn"><i class="path-1"></i></button>
+        </div>
+      </div>
+      <div id="pageBody" class="scrollbar-hover">
+        <div class="container">
+          <div id="pageAttrs" class="clearfix">
+            <div class="badge badge-zui" style="display: none" data-toggle="tooltip" title="此组件在标准版中提供">ZUI</div>
+            <div class="badge badge-lite" style="display: none" data-toggle="tooltip" title="此组件在简洁版中提供">LITE</div>
+            <div class="badge badge-lib" style="display: none" data-toggle="tooltip" title="此组件在lib目录中单独提供">LIB</div>
+            <a class="badge badge-party" style="display: none" data-toggle="tooltip" title="这是第三方组件，点击访问网站" target="_blank"><i class="icon icon-heart"></i> <span class="product-ver"></span></a>
+            <div class="badge badge-custom" style="display: none" data-toggle="tooltip" title="此组件可以拆分使用"><i class="icon icon-cogs"></i></div>
+            <div class="badge badge-version" style="display: none" data-toggle="tooltip" title="此组件的最早提供版本">1.2.0+</div>
+            <div class="badge badge-author hidden" data-toggle="tooltip" title="本文档作者"><i class="icon icon-user"></i> <span class="author-name">Catouse</span></div>
+            <a target="_blank" href="https://github.com/easysoft/zui/tree/master/docs/part" class="badge badge-source pull-right" data-toggle="tooltip" title="访问文档源码，Fork项目来完善文档"><i class="icon icon-pencil"></i></a>
+          </div>
+        </div>
+        <div class="loader" id="pageLoader"><i class="icon icon-spin icon-spinner-indicator"></i> <span class="loading-text">加载中...</span><span class="error-text">加载失败，请检查网络重试。<br>另一个导致无法加载文档的原因可能是该文档尚未完成。<br>欢迎你在 <a href="https://github.com/easysoft/zui">Github</a> 上 <a href="https://github.com/easysoft/zui/fork">Fork</a> 项目来完善文档。</span></div>
+        <div class="container">
+          <div id="pageContent"></div>
+          <nav></nav>
+        </div>
       </div>
     </div>
 
-    <hr class="half-rule">
+    <div class="text-muted loader loading"><i class="icon icon-spin icon-spinner-indicator"></i> 加载中...</div>
 
-    <p class="lead">Bootstrap is open source. It's hosted, developed, and maintained on GitHub.</p>
-    <a href="https://github.com/twbs/bootstrap" class="btn btn-outline btn-lg">View the GitHub project</a>
-  </div>
-</div>
-
-<div class="bs-docs-featurette">
-  <div class="container">
-    <h2 class="bs-docs-featurette-title">Built with Bootstrap.</h2>
-    <p class="lead">Millions of amazing sites across the web are being built with Bootstrap. Get started on your own with our growing <a href="../getting-started/#examples">collection of examples</a> or by exploring some of our favorites.</p>
-
-    <hr class="half-rule">
-
-    <div class="row bs-docs-featured-sites">
-    
-      <div class="col-xs-6 col-sm-3">
-        <a href="http://expo.getbootstrap.com/2014/10/29/lyft/" target="_blank" title="Lyft">
-          <img src="http://expo.getbootstrap.com/thumbs/lyft-thumb.jpg" alt="Lyft" class="img-responsive">
-        </a>
+    <div id="grid">
+      <div class="container">
+        <div class="row">
+          <div class="col col-md-d5 col-sm-6">
+            <div class="chapter" id="chapter-basic" data-id="basic">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-book"></i> <span class='name'>基础</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-basic">
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-d5 col-sm-6">
+            <div class="chapter" id="chapter-control" data-id="control">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-check-empty"></i> <span class='name'>控件</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-control">
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-d5 col-sm-6">
+            <div class="chapter" id="chapter-component" data-id="component">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-columns"></i> <span class='name'>组件</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-component">
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-d5 col-sm-6">
+            <div class="chapter" id="chapter-javascript" data-id="javascript">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-magic"></i> <span class='name'>JS插件</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-javascript">
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-d5 col-sm-6">
+            <div class="chapter" id="chapter-view" data-id="view">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-list-alt"></i> <span class='name'>视图</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-view">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-3 col-sm-6">
+            <div class="chapter" id="chapter-learn" data-id="learn">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-node"></i> <span class='name'>交流探索</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-learn">
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="chapter" id="chapter-promotion" data-id="promotion">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-diamond"></i> <span class='name'>推荐</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-promotion">
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="chapter" id="chapter-resource" data-id="resource">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-coffee"></i> <span class='name'>更多资源</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-resource">
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 col-sm-6">
+            <div class="chapter" id="chapter-contribution" data-id="contribution">
+              <div class="chapter-heading fade scale show">
+                <h4><i class="icon icon-heart"></i> <span class='name'>贡献</span></h4>
+              </div>
+              <div class="chapter-body" id="sections-contribution">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    
-      <div class="col-xs-6 col-sm-3">
-        <a href="http://expo.getbootstrap.com/2014/09/30/vogue/" target="_blank" title="Vogue">
-          <img src="http://expo.getbootstrap.com/thumbs/vogue-thumb.jpg" alt="Vogue" class="img-responsive">
-        </a>
-      </div>
-    
-      <div class="col-xs-6 col-sm-3">
-        <a href="http://expo.getbootstrap.com/2014/03/13/riot-design/" target="_blank" title="Riot Design">
-          <img src="http://expo.getbootstrap.com/thumbs/riot-thumb.jpg" alt="Riot Design" class="img-responsive">
-        </a>
-      </div>
-    
-      <div class="col-xs-6 col-sm-3">
-        <a href="http://expo.getbootstrap.com/2014/02/12/newsweek/" target="_blank" title="Newsweek">
-          <img src="http://expo.getbootstrap.com/thumbs/newsweek-thumb.jpg" alt="Newsweek" class="img-responsive">
-        </a>
-      </div>
-    
     </div>
 
-    <hr class="half-rule">
+    <footer>
+      <div class="container">
+        <hr>
+        <p class="text-muted"><small>文档版本 <span class="doc-version"><i class="icon icon-spin icon-spinner-indicator"></i></span></small></p>
+      </div>
+    </footer>
+ 
+    <!-- 一些html模板代码片段 -->
+    <div class="template">
+      <div class="card section fade scale slide-in-up-100 slide-in-right-50" id="sectionTemplate">
+        <div class="card-heading">
+          <i class="icon"></i>
+          <h5><a class="name" href="###"></a></h5>
+        </div>
+        <div class="card-content">
+          <ul class="topics">
+          </ul>
+        </div>
+      </div>
+      <div class="card-content section-preview icon-preview" id="iconPreviewTemplate">
+        <div class="icons"><i class="icon icon-10x"></i><i class="icon icon-5x"></i><i class="icon icon-2x"></i><i class="icon"></i></div>
+        <h3><small><i class="icon "></i></small> <span class="name color-accent"></span>  <small>Unicode: \<span class="unicode">f3dd</span><span class="alias"> · 别名：<span class="alias-values"></span></span></small></h3>
+        <pre><code><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">&quot;icon <span class="name"></span>&quot;</span><span class="tag">&gt;&lt;/i&gt;</span></code></pre>
+      </div>
+    </div>
 
-    <p class="lead">We showcase dozens of inspiring projects built with Bootstrap on the Bootstrap Expo.</p>
-    <a href="http://expo.getbootstrap.com" class="btn btn-outline btn-lg">Explore the Expo</a>
-  </div>
-</div>
+    <!-- jquery (lessup中的Javascript组件依赖于jquery，换用nodejs版cheerio) -->
+    <script src="assets/js/jquery.js"></script>
 
+    <!-- lessup javascript组件 -->
+    <script src="docs/assets/js/zui.min.js"></script>
+    <script src="docs/assets/js/doc.min.js"></script>
 
-    <!-- Footer
-================================================== -->
-<footer class="bs-docs-footer" role="contentinfo">
-  <div class="container">
-    <div class="bs-docs-social">
-  <ul class="bs-docs-social-buttons">
-    <li>
-      <iframe class="github-btn" src="#" width="100" height="20" title="Star on GitHub"></iframe>
-    </li>
-    <li>
-      <iframe class="github-btn" src="#" width="102" height="20" title="Fork on GitHub"></iframe>
-    </li>
-    <li class="follow-btn">
-      <a href="https://twitter.com/getbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @getbootstrap</a>
-    </li>
-    <li class="tweet-btn">
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getbootstrap.com/" data-count="horizontal" data-via="getbootstrap" data-related="mdo:Creator of Bootstrap">Tweet</a>
-    </li>
-  </ul>
-</div>
-
-
-    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>.</p>
-    <p>Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-    <p>Code licensed under <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
-    <ul class="bs-docs-footer-links text-muted">
-      <li>Currently v3.3.4</li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
-      <li>&middot;</li>
-      <li><a href="../getting-started/#examples">Examples</a></li>
-      <li>&middot;</li>
-      <li><a href="../2.3.2/">v2.3.2 docs</a></li>
-      <li>&middot;</li>
-      <li><a href="../about/">About</a></li>
-      <li>&middot;</li>
-      <li><a href="http://expo.getbootstrap.com">Expo</a></li>
-      <li>&middot;</li>
-      <li><a href="http://blog.getbootstrap.com">Blog</a></li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
-    </ul>
-  </div>
-</footer>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.min.js"></script>
-
-  <script src="../dist/js/bootstrap.min.js"></script>
-  
-  <script src="../assets/js/docs.min.js"></script>
-
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-
-<!-- Analytics
-================================================== -->
-
+    <!-- 增强文档插件 -->
+    <script async src="assets/js/google-code-prettify/prettify.js"></script>
+    <script async src="assets/js/marked/marked.min.js"></script>
 
   </body>
 </html>
